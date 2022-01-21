@@ -92,8 +92,8 @@ export class ProductService {
   getAll(): Product[] {
     return this.productList;
   }
-  getOne(id: string | number): Product[] {
-    return this.productList.filter(product=> product.id === Number(id) );
+  getOne(id: string | number): Product {
+    return this.productList.filter(product=> product.id === Number(id))[0];
   }
 
 }
