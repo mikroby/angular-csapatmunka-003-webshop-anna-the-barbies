@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Category } from '../model/category';
 import { Product } from '../model/product';
 
 @Injectable({
@@ -72,6 +73,17 @@ export class ProductService {
   { "id": 64, "catId": 10, "name": "Micimackó", "description": "zavartalan mézellátás, nem betűzi a szeretetet", "image": "micimacko.jpg", "price": 75000, "stock": 2, "featured": true, "active": true },
   { "id": 65, "catId": 10, "name": "Kisvakond", "description": "kerti munkák, tereprendezés", "image": "kisvakond.jpg", "price": 120000, "stock": 4, "featured": true, "active": true },
   { "id": 66, "catId": 10, "name": "Piroska", "description": "idősgondozás, ételszállítás (arcfelismerésben még fejlődnie kell)", "image": "piroska.jpg", "price": 45000, "stock": 5, "featured": false, "active": true }]
+
+  categoryList: Category[] = [{"id":1,"name":"bajnok","description":"Mert megérdemli! (választható megjelenéssel)"},
+  {"id":2,"name":"bajkeverő","description":"ha minden próbálkozása kudarcot vallott. ezotéria, hókusz-pókusz mesterfokon."},
+  {"id":3,"name":"utazásszervezés","description":"garantáltan vírusmentes közlekedés. megröptetjük a pénzé(ér)t."},
+  {"id":4,"name":"rekreáció","description":"lazuljon úgy, mint a nagyok. a mesevilág várja önt is."},
+  {"id":5,"name":"nyomozás","description":"Tűt keres a szénakazalban? Nem találja Waldo-t? Szakértő csapat, teljes diszkréció."},
+  {"id":6,"name":"szaki","description":"Ezermesterek referenciával, mindent is - igény szerint belülről kizárva vagy kívülről bezárva. Áfa-s számlaadás, regisztrált kivitelezők, korrekt határidők"},
+  {"id":7,"name":"show-műsor","description":"ámítás, szélhámoskodás anyagi kár nélkül."},
+  {"id":8,"name":"pénzügyi megoldások","description":"pénztárcabarát megoldások, meggyőző fellépés"},
+  {"id":9,"name":"őrzés-védelem","description":"Fort-Knox sincsen nagyobb biztonságban"},
+  {"id":10,"name":"háztartási alkalmazott","description":"szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás"}]
 
   constructor() { }
 
