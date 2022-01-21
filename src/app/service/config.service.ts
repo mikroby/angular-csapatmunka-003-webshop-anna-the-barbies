@@ -15,8 +15,16 @@ export class ConfigService {
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},
-    {text: 'Category01', link: '/cat01'},
-    {text: 'Category02', link: '/cat02'},
+    {text: 'Bajnok', link: '/cat01'},
+    {text: 'Bajkeverő', link: '/cat02'},
+    {text: 'Utazásszervezés', link: '/cat03'},
+    {text: 'Rekreáció', link: '/cat04'},
+    {text: 'Nyomozás', link: '/cat05'},
+    {text: 'Szaki', link: '/cat06'},
+    {text: 'Show-műsor', link: '/cat07'},
+    {text: 'Pénzügyi megoldások', link: '/cat08'},
+    {text: 'Őrzés-védelem', link: '/cat09'},
+    {text: 'Háztartási alkalmazott', link: '/cat010'},
   ];
 
   constructor() { }
