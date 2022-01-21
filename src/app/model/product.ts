@@ -10,15 +10,15 @@ export class Product {
   featured: boolean = false;
   active: boolean = true;
 
-  constructor(id: number, catId: number, name: string, description: string, image: string, price: number, stock: number, featured: boolean, active: boolean) {
-    this.id = id;
-    this.catId = catId;
-    this.name = name;
-    this.description = description;
-    this.image = image;
-    this.price = price;
-    this.stock = stock;
-    this.featured = featured;
-    this.active = active;
+  constructor(parameters: Product) {
+    this.id = parameters.id;
+    this.catId = parameters.catId;
+    this.name = parameters.name;
+    this.description = parameters.description;
+    this.image = parameters.image;
+    this.price = parameters.price;
+    this.stock = parameters.stock;
+    this.featured = parameters.featured;
+    this.active = parameters.active;
   }
 }
