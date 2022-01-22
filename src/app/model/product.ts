@@ -10,15 +10,10 @@ export class Product {
   featured: boolean = false;
   active: boolean = true;
 
-  constructor(parameters: Product) {
-    this.id = parameters.id;
-    this.catId = parameters.catId;
-    this.name = parameters.name;
-    this.description = parameters.description;
-    this.image = parameters.image;
-    this.price = parameters.price;
-    this.stock = parameters.stock;
-    this.featured = parameters.featured;
-    this.active = parameters.active;
+  constructor(parameters?: Product) {
+    if(!parameters) {return}
+    for (const key of Object.keys(parameters)){
+      this[key] = parameters[key];
+    }
   }
 }
