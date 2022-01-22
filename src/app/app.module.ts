@@ -17,6 +17,7 @@ import { Cat09Component } from './page/cat09/cat09.component';
 import { Cat10Component } from './page/cat10/cat10.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { ProductSliderComponent } from './common/product-slider/product-slider.component';
+import { ProductListComponent } from './common/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,8 @@ import { ProductSliderComponent } from './common/product-slider/product-slider.c
     Cat10Component,
     ProductCardComponent,
     ProductSliderComponent
+    ProductListComponent
+
   ],
   imports: [
     BrowserModule,
