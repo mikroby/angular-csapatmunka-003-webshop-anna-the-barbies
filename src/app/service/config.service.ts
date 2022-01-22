@@ -11,7 +11,7 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'Hero-Hire';
 
   menuItems: IMenuItem[] = [
     {text: 'Home', link: '/', icon: 'home'},
