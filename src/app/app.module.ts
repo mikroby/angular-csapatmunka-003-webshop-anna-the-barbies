@@ -15,6 +15,7 @@ import { Cat07Component } from './page/cat07/cat07.component';
 import { Cat08Component } from './page/cat08/cat08.component';
 import { Cat09Component } from './page/cat09/cat09.component';
 import { Cat10Component } from './page/cat10/cat10.component';
+import { ProductCardComponent } from './common/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Cat10Component } from './page/cat10/cat10.component';
     Cat07Component,
     Cat08Component,
     Cat09Component,
-    Cat10Component
+    Cat10Component,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
