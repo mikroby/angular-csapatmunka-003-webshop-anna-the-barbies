@@ -16,6 +16,7 @@ import { Cat08Component } from './page/cat08/cat08.component';
 import { Cat09Component } from './page/cat09/cat09.component';
 import { Cat10Component } from './page/cat10/cat10.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
+import { ProductListComponent } from './common/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
     Cat08Component,
     Cat09Component,
     Cat10Component,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
