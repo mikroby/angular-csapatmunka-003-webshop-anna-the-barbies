@@ -11,7 +11,7 @@ export class Product {
   active: boolean = true;
 
   constructor(parameters?: Product) {
-    if(!parameters) {return}
+    if(!parameters) {return;}
     for (const key of Object.keys(parameters)){
       this[key] = parameters[key];
     }
