@@ -98,4 +98,7 @@ export class ProductService {
   getFeaturedByCatId(catId: string | number) : Product[] {
     return this.productList.filter(product=> product.catId === Number(catId) && product.featured);
   }
+  getFeaturedAll(): Product[] {
+    return this.productList.filter(product=> product.featured)
+  }
 }
