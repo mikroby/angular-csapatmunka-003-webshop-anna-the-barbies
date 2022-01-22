@@ -95,5 +95,10 @@ export class ProductService {
   getOne(id: string | number): Product {
     return this.productList.filter(product=> product.id === Number(id))[0];
   }
-
+  getFeaturedByCatId(catId: string | number) : Product[] {
+    return this.productList.filter(product=> product.catId === Number(catId) && product.featured);
+  }
+  getFeaturedAll(): Product[] {
+    return this.productList.filter(product=> product.featured)
+  }
 }
