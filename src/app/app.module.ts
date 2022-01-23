@@ -18,6 +18,7 @@ import { Cat10Component } from './page/cat10/cat10.component';
 import { ProductCardComponent } from './common/product-card/product-card.component';
 import { ProductSliderComponent } from './common/product-slider/product-slider.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
+import { FilterPipe } from './pipe/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     Cat10Component,
     ProductCardComponent,
     ProductSliderComponent,
-    ProductListComponent
+    ProductListComponent,
+    FilterPipe,
 
   ],
   imports: [

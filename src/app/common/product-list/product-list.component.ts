@@ -9,11 +9,12 @@ import { Product } from 'src/app/model/product';
 export class ProductListComponent implements OnInit {
 
   @Input() list: Product[] = [];
-  @Input() phrase: string = '';
+  
+  phrase: string = '';
 
   constructor() { }
 
-
+  
 
   ngOnInit(): void {
   }
