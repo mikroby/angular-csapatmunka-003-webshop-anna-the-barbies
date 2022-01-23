@@ -7,7 +7,8 @@ import { Product } from 'src/app/model/product';
 })
 
 export class ProductCardComponent implements OnInit {
-  @Input() currentProduct: Product | undefined;
+  @Input() currentProduct: Product = new Product();
+  src = `/src/app/assets/img/${this.currentProduct.image}`;
 
   constructor() { }
 
