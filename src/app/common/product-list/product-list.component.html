@@ -13,7 +13,7 @@
 
 <div class="row mt-3">
   <div class="col-12 d-flex flex-row flex-wrap justify-content-center">
-    <div *ngFor="let product of list | filter:phrase:filterKey" class="mx-1 my-3">
+    <div *ngFor="let product of list | filter:phrase:filterKey" class="mx-1 my-1">
       <app-product-card [currentProduct]="product"></app-product-card>
     </div>
   </div>
