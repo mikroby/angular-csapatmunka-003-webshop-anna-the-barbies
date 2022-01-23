@@ -8,6 +8,7 @@ import { Product } from 'src/app/model/product';
 
 export class ProductCardComponent implements OnInit {
   @Input() currentProduct: Product = new Product();
+
   src: string = "";
 
   constructor() { }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-cat08',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Cat08Component implements OnInit {
 
-  constructor() { }
+  listByCatId: Product[] = this.productService.getAllbyCatId(8)
+
+  constructor(
+    private productService: ProductService,
+  ) { }
 
   ngOnInit(): void {
   }
