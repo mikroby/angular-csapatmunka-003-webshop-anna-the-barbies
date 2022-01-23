@@ -101,4 +101,7 @@ export class ProductService {
   getFeaturedAll(): Product[] {
     return this.productList.filter(product=> product.featured)
   }
+  getAllbyCatId(catId: string | number): Product[] {
+    return this.productList.filter(product=> product.catId === Number(catId));
+  }
 }
