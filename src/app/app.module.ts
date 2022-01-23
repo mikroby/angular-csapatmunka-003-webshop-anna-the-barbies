@@ -35,7 +35,7 @@ import { ProductListComponent } from './common/product-list/product-list.compone
     Cat09Component,
     Cat10Component,
     ProductCardComponent,
-    ProductSliderComponent
+    ProductSliderComponent,
     ProductListComponent
 
   ],
