@@ -1,13 +1,13 @@
 <div class="row">
-  <div class="col-12">
-    <input type="text">
+  <div class="col-6">
+    <input [(ngModel)]="phrase" type="text" class="form-control" placeholder="keresés...">
   </div>
 </div>
 
 <div class="row">
   <div class="col-12">
     <!-- pipe later! -->
-    <ng-container *ngFor="let product of list">
+    <ng-container *ngFor="let product of list | filter:phrase:filterKey">
       <app-product-card [currentProduct]="product"></app-product-card>
     </ng-container>
   </div>
