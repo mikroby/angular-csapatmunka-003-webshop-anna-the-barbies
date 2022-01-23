@@ -12,9 +12,9 @@ export class ProductListComponent implements OnInit {
   
   phrase: string = '';
 
-  constructor() { }
+  filterKey: string = '';
 
-  
+  constructor() { }
 
   ngOnInit(): void {
   }
