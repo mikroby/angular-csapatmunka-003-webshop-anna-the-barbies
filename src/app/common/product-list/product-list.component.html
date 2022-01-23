@@ -5,8 +5,7 @@
 </div>
 
 <div class="row">
-  <div class="col-12">
-    <!-- pipe later! -->
+  <div class="col-12">   
     <ng-container *ngFor="let product of list | filter:phrase:filterKey">
       <app-product-card [currentProduct]="product"></app-product-card>
     </ng-container>
