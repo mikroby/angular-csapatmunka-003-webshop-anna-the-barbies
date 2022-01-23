@@ -1,1 +1,10 @@
-<p>product-card works!</p>
+<ng-container *ngIf="currentProduct">
+  <div class="card" style="width: 18rem;">
+    <img src="/src/app/assets/img/${currentProduct.image}" alt="hero">
+    <div class="card-body">
+      <h5 class="card-title">{{ currentProduct.name }}</h5>
+      <p class="card-text">{{ currentProduct.description }}</p>
+      <a href="#" class="btn btn-primary">Hire me!</a>
+    </div>
+  </div>
+</ng-container>
