@@ -1,6 +1,6 @@
 <ng-container *ngIf="currentProduct">
   <div class="card" style="width: 18rem;">
-    <img src="/src/app/assets/img/${currentProduct.image}" alt="hero">
+    <img src={{ src }} alt="hero">
     <div class="card-body">
       <h5 class="card-title">{{ currentProduct.name }}</h5>
       <p class="card-text">{{ currentProduct.description }}</p>
