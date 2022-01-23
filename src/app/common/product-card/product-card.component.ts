@@ -8,10 +8,11 @@ import { Product } from 'src/app/model/product';
 
 export class ProductCardComponent implements OnInit {
   @Input() currentProduct: Product = new Product();
-  src = `./assets/img/${this.currentProduct.image}`;
+  src: string = "";
 
   constructor() { }
 
   ngOnInit(): void {
+    this.src=`/assets/img/${this.currentProduct.image}`;
   }
 }
