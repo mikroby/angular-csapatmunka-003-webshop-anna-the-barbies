@@ -1,9 +1,9 @@
 <ng-container *ngIf="currentProduct">
-  <div class="card h-100 my-2 mx-1 py-3 rounded-3 shadow" style="width: 12rem;">
+  <div class="card h-100 my-2 mx-1 py-3 rounded-3 shadow" style="width: 16rem;" >
     <img [src]="src" class="card-img-top" alt="{{ currentProduct.name }}">
     <div class="card-body d-flex flex-column">
       <h5 class="card-title text-center">{{ currentProduct.name }}</h5>
-      <p class="lead card-text text-center"> {{ currentProduct.description }}</p>
+      <p class="card-text text-center m-0"><em>#{{ currentProduct.description }}</em></p>
       <div class="mt-auto">
         <ul class="list-group list-group-flush">
           <li class="list-group-item card-text text-center">Bérlés díja: {{ currentProduct.price }} Ft</li>
