@@ -93,19 +93,30 @@ export class ProductService {
     return this.productList;
   }
   getOne(id: string | number): Product {
-    return this.productList.filter(product=> product.id === Number(id))[0];
+    return this.productList.filter(product => product.id === Number(id))[0];
   }
-  getFeaturedByCatId(catId: string | number) : Product[] {
-    return this.productList.filter(product=> product.catId === Number(catId) && product.featured);
+  getAllFeaturedByCatId(catId: string | number): Product[] {
+    return this.productList.filter(product => product.catId === Number(catId) && product.featured);
   }
   getFeaturedAll(): Product[] {
-    return this.productList.filter(product=> product.featured)
+    return this.productList.filter(product => product.featured)
   }
   getAllbyCatId(catId: string | number): Product[] {
-    return this.productList.filter(product=> product.catId === Number(catId));
+    return this.productList.filter(product => product.catId === Number(catId));
   }
-  // getCategory(catId: string | number): Category[]){
-  //   return this.category
-  // }
+  getCategory(catId: string | number): Category{
+    return this.categoryList.filter(category => category.id === Number(catId))[0];
+  }
+  getRandom(list: Product[], num: number = 5): Product[] {
+    num = num > list.length ? list.length : num;
+    const copyList = [...list];
+    const result = [];
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(Math.random() * copyList.length);
+      result.push(copyList[index]);
+      copyList.splice(index, 1);
+    }
+    return result;
+  }
 
 }

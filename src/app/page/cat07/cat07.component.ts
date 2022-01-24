@@ -9,6 +9,8 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat07Component implements OnInit {
 
+  catFeaturedAll: Product[] = this.productService.getAllFeaturedByCatId(7);
+  catFeaturedToDisplay: Product[] = this.productService.getRandom(this.catFeaturedAll);
   listByCatId: Product[] = this.productService.getAllbyCatId(7)
 
   constructor(
