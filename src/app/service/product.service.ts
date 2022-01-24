@@ -104,4 +104,8 @@ export class ProductService {
   getAllbyCatId(catId: string | number): Product[] {
     return this.productList.filter(product=> product.catId === Number(catId));
   }
+  // getCategory(catId: string | number): Category[]){
+  //   return this.category
+  // }
+
 }
