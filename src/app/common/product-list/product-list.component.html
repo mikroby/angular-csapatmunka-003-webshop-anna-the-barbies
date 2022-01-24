@@ -6,16 +6,17 @@
           <i class="fa fa-search" aria-hidden="true"></i>
         </span>
       </div>
-      <input [(ngModel)]="phrase" type="text" class="form-control" placeholder="keresés tetszőleges paraméter alapján...">
+      <input [(ngModel)]="phrase" type="text" class="form-control"
+        placeholder="keresés tetszőleges paraméter alapján...">
     </div>
 
-    <h3 class="text-center mt-4">Hőseink {{list[0].catId}}. kategóriában</h3>
+    <h3 class="text-center mt-4">Hőseink {{categoryName}} kategóriában</h3>
 
   </div>
 </div>
 
-<div class="row mt-3 row-cols-1 row-cols-md-2 row-cols-lg-5">  
-    <div *ngFor="let product of list | filter:phrase:filterKey" class="mb-4">
-      <app-product-card [currentProduct]="product"></app-product-card>
-    </div> 
+<div class="row mt-3 row-cols-1 row-cols-md-2 row-cols-lg-5">
+  <div *ngFor="let product of list | filter:phrase:filterKey" class="mb-4">
+    <app-product-card [currentProduct]="product"></app-product-card>
+  </div>
 </div>
