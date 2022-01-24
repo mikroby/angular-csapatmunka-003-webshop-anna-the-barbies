@@ -15,7 +15,7 @@
 </div>
 
 <div class="row mt-3 row-cols-1 row-cols-md-2 row-cols-lg-5">  
-    <div *ngFor="let product of list | filter:phrase:filterKey" class="my-1">
+    <div *ngFor="let product of list | filter:phrase:filterKey" class="mb-4">
       <app-product-card [currentProduct]="product"></app-product-card>
     </div> 
 </div>
