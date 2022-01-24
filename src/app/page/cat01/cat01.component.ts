@@ -9,6 +9,8 @@ import { Product } from 'src/app/model/product';
 })
 export class Cat01Component implements OnInit {
 
+  catFeatured: Product[] = this.productService.getAllbyCatId(1);
+  catFeaturedToDisplay: Product[] = this.getRandom(this.catFeatured);
   listByCatId: Product[] = this.productService.getAllbyCatId(1)
 
   constructor(
@@ -16,6 +18,16 @@ export class Cat01Component implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+  getRandom(list: Product[], num: number = 5): Product[] {
+    const copyList = [...list];
+    const result = [];
+    for (let i = 0; i < num; i++) {
+      const index = Math.floor(Math.random() * list.length);
+      result.push(copyList[index]);
+      copyList.splice(index, 1);
+    }
+    return result;
   }
 
 }
