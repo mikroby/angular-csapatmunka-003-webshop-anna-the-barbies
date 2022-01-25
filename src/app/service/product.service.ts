@@ -10,7 +10,7 @@ export class ProductService {
   productList: Product[] = [
     { "id": 1, "catId": 1, "name": "Powerpuff Girls", "description": "cukiság és hősiesség kimaxolva", "image": "pindur-pandurok.jpg", "price": 100000, "stock": 3, "featured": false, "active": true },
     { "id": 2, "catId": 2, "name": "Dee Dee", "description": "önmegsemmisítő gomb nem marad érintetlenül", "image": "dee-dee.jpg", "price": 75000, "stock": 1, "featured": true, "active": true },
-    { "id": 3, "catId": 3, "name": "Kockásfülű Nyúl", "description": "városnézés a magasból", "image": "kockasfulu-nyul.jpg", "price": 19000, "stock": 1, "featured": false, "active": true },
+    { "id": 3, "catId": 3, "name": "Kockásfülű Nyúl", "description": "városnézés a magasból", "image": "kockasfulu-nyul.png", "price": 19000, "stock": 1, "featured": false, "active": true },
     { "id": 4, "catId": 4, "name": "Pom Pom", "description": "a multifunkciós lazulás nagymestere. fel....le....hehe", "image": "pom-pom.jpg", "price": 99000, "stock": 1, "featured": true, "active": true },
     { "id": 5, "catId": 3, "name": "Legkisebb Királyfi", "description": "a világ végére és vissza, vele (vagy nélküle...)", "image": "legkisebb-kiralyfi.png", "price": 100000, "stock": 12, "featured": true, "active": true },
     { "id": 6, "catId": 5, "name": "Vuk", "description": "a lelkes kezdő. még sokra viszi. nem buta, csak még keveset tud.róka-béka, vagy béka-róka???", "image": "vuk.jpg", "price": 125000, "stock": 1, "featured": true, "active": true },
@@ -74,7 +74,8 @@ export class ProductService {
     { "id": 64, "catId": 10, "name": "Micimackó", "description": "zavartalan mézellátás, nem betűzi a szeretetet", "image": "micimacko.jpg", "price": 75000, "stock": 2, "featured": true, "active": true },
     { "id": 65, "catId": 10, "name": "Kisvakond", "description": "kerti munkák, tereprendezés", "image": "kisvakond.jpg", "price": 120000, "stock": 4, "featured": true, "active": true },
     { "id": 66, "catId": 10, "name": "Piroska", "description": "idősgondozás, ételszállítás (arcfelismerésben még fejlődnie kell)", "image": "piroska.jpg", "price": 45000, "stock": 5, "featured": false, "active": true },
-    { "id": 67, "catId": 9, "name": "James P. Sullivan", "description": "Booo!...csak ránéz és meg vagy védve", "image": "sullivan.png", "price": 45000, "stock": 5, "featured": true, "active": true }]
+    { "id": 67, "catId": 9, "name": "James P. Sullivan", "description": "Booo!...csak ránéz és meg vagy védve", "image": "sullivan.png", "price": 45000, "stock": 5, "featured": true, "active": true },
+    { "id": 68, "catId": 3, "name": "Jancsi és Juliska", "description": "Izgalmas erdei kalandozás. Ebéd a Vasorrú Bábánál!", "image": "jancsi-juliska.png", "price": 100000, "stock": 6, "featured": false, "active": true }]
 
   categoryList: Category[] = [
     { "id": 1, "name": "bajnok", "description": "Mert megérdemli! (választható megjelenéssel)" },
