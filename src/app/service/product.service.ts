@@ -16,7 +16,7 @@ export class ProductService {
     { "id": 6, "catId": 5, "name": "Vuk", "description": "a lelkes kezdő. még sokra viszi. nem buta, csak még keveset tud.róka-béka, vagy béka-róka???", "image": "vuk.jpg", "price": 125000, "stock": 1, "featured": true, "active": true },
     { "id": 7, "catId": 6, "name": "Vizipók-csodapók", "description": "ahová Spider-man nem fér be...", "image": "vizipok-csodapok.png", "price": 99000, "stock": 1, "featured": false, "active": true },
     { "id": 8, "catId": 4, "name": "Shrek", "description": "pillanatok alatt elkészíti pezsgőfürdőjét! iszappakolás, masszázs", "image": "shrek.jpg", "price": 120000, "stock": 3, "featured": true, "active": true },
-    { "id": 9, "catId": 5, "name": "Crocodile Dundee", "description": "veszélyesebb küldetéseket is vállal. városi környezetbe nem ajánljuk.", "image": "crocodile_dundee.jpg", "price": 199000, "stock": 1, "featured": true, "active": true },
+    { "id": 9, "catId": 5, "name": "Crocodile Dundee", "description": "veszélyesebb küldetéseket is vállal. városi környezetbe nem ajánljuk.", "image": "crocodile_dundee.png", "price": 199000, "stock": 1, "featured": true, "active": true },
     { "id": 10, "catId": 7, "name": "James Bond", "description": "mixer, sofőr, stand-up - 3 az 1-ben. elegáns megjelenés, hibátlan fogsor", "image": "james-bond.png", "price": 1000000, "stock": 1, "featured": true, "active": true },
     { "id": 11, "catId": 5, "name": "Indiana Jones", "description": "elveszett a frigyládája? Jones megtalálja!", "image": "indiana-jones.png", "price": 990000, "stock": 5, "featured": true, "active": true },
     { "id": 12, "catId": 8, "name": "Robin Hood", "description": "a vajszívű végrehajtó, minden fillérnek jó gazdája, az újraelosztás fenoménje.", "image": "robin-hood.jpg", "price": 700000, "stock": 9, "featured": true, "active": true },
@@ -24,16 +24,16 @@ export class ProductService {
     { "id": 14, "catId": 9, "name": "Toldi Miklós", "description": "vitézember, költöztetést is vállal", "image": "toldi-miklos.png", "price": 15000, "stock": 1, "featured": true, "active": true },
     { "id": 15, "catId": 2, "name": "Pomogácsok", "description": "jönnek! majd megtudod! életre szóló meglepetés", "image": "pomogacs.png", "price": 450000, "stock": 1000, "featured": true, "active": true },
     { "id": 16, "catId": 8, "name": "Ludas Matyi", "description": "tartozásbehajtás. 3x hatékonyabb, mint a versenytársak", "image": "ludas-matyi.png", "price": 300000, "stock": 3, "featured": true, "active": true },
-    { "id": 17, "catId": 6, "name": "Süsü", "description": "begyújt, cölöpet ver, ahogy kell...", "image": "susu.jpg", "price": 77000, "stock": 1, "featured": false, "active": true },
+    { "id": 17, "catId": 6, "name": "Süsü", "description": "begyújt, cölöpet ver, ahogy kell...", "image": "susu.png", "price": 77000, "stock": 1, "featured": false, "active": true },
     { "id": 18, "catId": 4, "name": "Gombóc Artúr", "description": "most kedvezményes csokiszökökúttal", "image": "gomboc-artur.png", "price": 75000, "stock": 5, "featured": true, "active": true },
-    { "id": 19, "catId": 7, "name": "Hüvelyk Matyi", "description": "tolmács, extra adójóváírással, CSOK-kal", "image": "huvelyk-matyi.jpg", "price": 25000, "stock": 2, "featured": false, "active": true },
+    { "id": 19, "catId": 7, "name": "Mike Wazowski", "description": "vicces, sokat beszél, nem fogsz unatkozni", "image": "mike.png", "price": 25000, "stock": 5, "featured": false, "active": true },
     { "id": 20, "catId": 6, "name": "7 törpe", "description": "kerti medencéjét kiássák, 7 munkás egy áráért", "image": "het-torpe.jpg", "price": 250000, "stock": 7, "featured": true, "active": true },
     { "id": 21, "catId": 1, "name": "Tündérkeresztanya", "description": "kívánsága parancs, tökökre vigyázni!", "image": "tunderkeresztanya.jpg", "price": 200000, "stock": 3, "featured": true, "active": true },
     { "id": 22, "catId": 2, "name": "Gonosz Mostoha", "description": "professzionális áskálódás, mesterfokon", "image": "gonosz-mostoha.jpg", "price": 999999, "stock": 5, "featured": true, "active": true },
     { "id": 23, "catId": 9, "name": "Karak", "description": "szakterülete a szárnyasok védelme", "image": "karak.png", "price": 45000, "stock": 2, "featured": true, "active": true },
     { "id": 24, "catId": 4, "name": "Hófehérke", "description": "szépségtrükkök tükör nélkül", "image": "hofeherke.jpg", "price": 270000, "stock": 1, "featured": true, "active": true },
     { "id": 25, "catId": 1, "name": "Herceg (fehér lovon)", "description": "szőke, barna és vörös opcióval választható", "image": "herceg-feher-lovon.png", "price": 300000, "stock": 3, "featured": false, "active": true },
-    { "id": 26, "catId": 1, "name": "Batman", "description": "nananana", "image": "batman.png", "price": 1000000, "stock": 9, "featured": true, "active": true },
+    { "id": 26, "catId": 1, "name": "Batman", "description": "nananana", "image": "batman2.png", "price": 1000000, "stock": 9, "featured": true, "active": true },
     { "id": 27, "catId": 6, "name": "Spider-man", "description": "sző, fon, nem takács, ács (létra nélkül)", "image": "spiderman.png", "price": 750000, "stock": 4, "featured": true, "active": true },
     { "id": 28, "catId": 3, "name": "Luke Skywalker", "description": "az erő vele van, nem? de.", "image": "luke-skywalker.png", "price": 10, "stock": 1, "featured": true, "active": true },
     { "id": 29, "catId": 3, "name": "Han Solo", "description": "Kessel futam, 12 parsec alatt", "image": "han-solo.png", "price": 1000000, "stock": 1, "featured": true, "active": true },
@@ -56,9 +56,9 @@ export class ProductService {
     { "id": 46, "catId": 1, "name": "Legolas", "description": "tünde szeme messze lát", "image": "legolas.png", "price": 800000, "stock": 1, "featured": false, "active": true },
     { "id": 47, "catId": 9, "name": "Csavardi Samu", "description": "soha el nem hagy!", "image": "csavardi-samu.png", "price": 78000, "stock": 3, "featured": true, "active": true },
     { "id": 48, "catId": 10, "name": "Superman (háztartási)", "description": "eldugult a mosogató? ráégett a zsír?", "image": "superman.jpg", "price": 1000000, "stock": 8, "featured": true, "active": true },
-    { "id": 49, "catId": 9, "name": "Pityke Őrmester", "description": "Marcipán-nal az igazi! (kedvezmények)", "image": "pityke-ormester.png", "price": 50000, "stock": 5, "featured": true, "active": true },
+    { "id": 49, "catId": 5, "name": "Pityke Őrmester", "description": "Marcipán-nal az igazi!", "image": "pityke-ormester.png", "price": 50000, "stock": 5, "featured": true, "active": true },
     { "id": 50, "catId": 10, "name": "Hamupipőke", "description": "kiborult a mák? reggelre mindennel is meglesz!", "image": "hamupipoke.jpg", "price": 9990, "stock": 1, "featured": true, "active": true },
-    { "id": 51, "catId": 6, "name": "Mézga Aladár", "description": "1 forintért megmondja!", "image": "mezga-aladar.jpg", "price": 120000, "stock": 1, "featured": true, "active": true },
+    { "id": 51, "catId": 6, "name": "Mézga Aladár", "description": "1 forintért megmondja!", "image": "mezga-aladar2.png", "price": 120000, "stock": 1, "featured": true, "active": true },
     { "id": 52, "catId": 2, "name": "Rózsaszín Párduc", "description": "a beszerzők beszerzője - se páncél, se riasztó, se csetlő-botló Clouseau felügyelő nem akadály", "image": "rozsaszin-parduc.jpg", "price": 125000, "stock": 2, "featured": true, "active": true },
     { "id": 53, "catId": 2, "name": "Prérifarkas", "description": "professzionális üldözősofőr, beépített csapdafelismerő rendszerrel", "image": "prerifarkas.jpg", "price": 90000, "stock": 1, "featured": true, "active": true },
     { "id": 54, "catId": 2, "name": "Curious George", "description": "unatkozik? fogadjon örökbe kismajmot!", "image": "george-bajkevero.jpg", "price": 50000, "stock": 10, "featured": false, "active": true },
@@ -73,7 +73,8 @@ export class ProductService {
     { "id": 63, "catId": 10, "name": "Az erdő állatai", "description": "szoprán énekrangra aktiválódó, az összes háztartási tevékenységre kiterjedő szolgáltatás", "image": "erdo-allatai.jpg", "price": 25000, "stock": 10000, "featured": true, "active": true },
     { "id": 64, "catId": 10, "name": "Micimackó", "description": "zavartalan mézellátás, nem betűzi a szeretetet", "image": "micimacko.jpg", "price": 75000, "stock": 2, "featured": true, "active": true },
     { "id": 65, "catId": 10, "name": "Kisvakond", "description": "kerti munkák, tereprendezés", "image": "kisvakond.jpg", "price": 120000, "stock": 4, "featured": true, "active": true },
-    { "id": 66, "catId": 10, "name": "Piroska", "description": "idősgondozás, ételszállítás (arcfelismerésben még fejlődnie kell)", "image": "piroska.jpg", "price": 45000, "stock": 5, "featured": false, "active": true }]
+    { "id": 66, "catId": 10, "name": "Piroska", "description": "idősgondozás, ételszállítás (arcfelismerésben még fejlődnie kell)", "image": "piroska.jpg", "price": 45000, "stock": 5, "featured": false, "active": true },
+    { "id": 67, "catId": 9, "name": "James P. Sullivan", "description": "Booo!...csak ránéz és meg vagy védve", "image": "sullivan.png", "price": 45000, "stock": 5, "featured": true, "active": true }]
 
   categoryList: Category[] = [
     { "id": 1, "name": "bajnok", "description": "Mert megérdemli! (választható megjelenéssel)" },
@@ -110,7 +111,7 @@ export class ProductService {
   getRandom(list: Product[], num: number = 5): Product[] {
     num = num > list.length ? list.length : num;
     const copyList = [...list];
-    const result = [];
+    const result: Product[] = [];
     for (let i = 0; i < num; i++) {
       const index = Math.floor(Math.random() * copyList.length);
       result.push(copyList[index]);
