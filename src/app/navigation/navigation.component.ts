@@ -10,12 +10,15 @@ export class NavigationComponent implements OnInit {
 
   appName: string = this.config.appName;
   menuItems: IMenuItem[] = this.config.menuItems;
-
+  navbarOpen = false;
   constructor(
     private config: ConfigService,
   ) { }
 
   ngOnInit(): void {
+  }
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }
