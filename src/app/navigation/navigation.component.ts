@@ -8,6 +8,7 @@ import { ConfigService, IMenuItem } from '../service/config.service';
 })
 export class NavigationComponent implements OnInit {
 
+  navbarOpen = false;
   appName: string = this.config.appName;
   menuItems: IMenuItem[] = this.config.menuItems;
   navbarOpen = false;
