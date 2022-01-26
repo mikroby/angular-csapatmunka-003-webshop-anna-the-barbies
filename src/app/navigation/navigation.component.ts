@@ -8,6 +8,7 @@ import { ConfigService, IMenuItem } from '../service/config.service';
 })
 export class NavigationComponent implements OnInit {
 
+  navbarOpen = false;
   appName: string = this.config.appName;
   menuItems: IMenuItem[] = this.config.menuItems;
 
@@ -16,6 +17,9 @@ export class NavigationComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+  toggleNavbar() {
+    this.navbarOpen = !this.navbarOpen;
   }
 
 }
