@@ -20,7 +20,7 @@ export class ProductService {
     { "id": 10, "catId": 7, "name": "James Bond", "description": "mixer, sofőr, stand-up - 3 az 1-ben. elegáns megjelenés, hibátlan fogsor", "image": "james-bond.png", "price": 1000000, "stock": 1, "featured": true, "active": true },
     { "id": 11, "catId": 5, "name": "Indiana Jones", "description": "elveszett a frigyládája? Jones megtalálja!", "image": "indiana-jones.png", "price": 990000, "stock": 5, "featured": true, "active": true },
     { "id": 12, "catId": 8, "name": "Robin Hood", "description": "a vajszívű végrehajtó, minden fillérnek jó gazdája, az újraelosztás fenoménje.", "image": "robin-hood.jpg", "price": 700000, "stock": 9, "featured": true, "active": true },
-    { "id": 13, "catId": 9, "name": "Kinizsi Pál", "description": "ha kell, szól a feketeseregnek, okosba'", "image": "kinizsi-pal.png", "price": 10000, "stock": 1, "featured": false, "active": true },
+    { "id": 13, "catId": 9, "name": "Kinizsi Pál", "description": "ha kell, szól a Feketeseregnek, okosba'", "image": "kinizsi-pal.png", "price": 10000, "stock": 1, "featured": false, "active": true },
     { "id": 14, "catId": 9, "name": "Toldi Miklós", "description": "vitézember, költöztetést is vállal", "image": "toldi-miklos.png", "price": 15000, "stock": 1, "featured": true, "active": true },
     { "id": 15, "catId": 2, "name": "Pomogácsok", "description": "jönnek! majd megtudod! életre szóló meglepetés", "image": "pomogacs.png", "price": 450000, "stock": 1000, "featured": true, "active": true },
     { "id": 16, "catId": 8, "name": "Ludas Matyi", "description": "tartozásbehajtás. 3x hatékonyabb, mint a versenytársak", "image": "ludas-matyi.png", "price": 300000, "stock": 3, "featured": true, "active": true },
