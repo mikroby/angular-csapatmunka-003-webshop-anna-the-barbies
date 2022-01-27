@@ -25,6 +25,7 @@ export class ConfigService {
     {text: 'Pénzügyi megoldások', link: '/cat08'},
     {text: 'Őrzés-védelem', link: '/cat09'},
     {text: 'Háztartási alkalmazott', link: '/cat10'},
+    {text: 'Admin', link: '/admin'},
   ];
 
   constructor() { }
