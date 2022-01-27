@@ -7,6 +7,8 @@ import { Product } from '../model/product';
 })
 export class ProductService {
 
+  // innentől törölhető ha kész a service.
+
   productList: Product[] = [
     { "id": 1, "catId": 1, "name": "Powerpuff Girls", "description": "cukiság és hősiesség kimaxolva", "image": "pindur-pandurok.jpg", "price": 100000, "stock": 3, "featured": false, "active": true },
     { "id": 2, "catId": 2, "name": "Dee Dee", "description": "önmegsemmisítő gomb nem marad érintetlenül", "image": "dee-dee.jpg", "price": 75000, "stock": 1, "featured": true, "active": true },
@@ -90,6 +92,8 @@ export class ProductService {
     { "id": 9, "name": "őrzés-védelem", "description": "Fort-Knox sincsen nagyobb biztonságban" },
     { "id": 10, "name": "háztartási alkalmazott", "description": "szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás" }]
 
+  // idáig törölhető ha kész a service.
+
   constructor() { }
 
   getAll(): Product[] {
@@ -107,7 +111,7 @@ export class ProductService {
   getAllbyCatId(catId: string | number): Product[] {
     return this.productList.filter(product => product.catId === Number(catId));
   }
-  getCategory(catId: string | number): Category{
+  getCategory(catId: string | number): Category {
     return this.categoryList.filter(category => category.id === Number(catId))[0];
   }
   getRandom(list: Product[], num: number = 5): Product[] {
