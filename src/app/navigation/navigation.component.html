@@ -27,7 +27,10 @@
           class="nav-link"
           [routerLink]="item.link"
 
-        >{{ item.text }}</a>
+        >{{ item.text }}
+          <i *ngIf="item.icon"
+          [ngClass]="item.icon" data-toggle="tooltip" data-placement="top" title="Admin"></i>
+      </a>
       </li>
 
     </ul>
