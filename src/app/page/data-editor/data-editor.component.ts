@@ -1,4 +1,8 @@
+import { ProductService } from 'src/app/service/product.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from 'src/app/model/product';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-data-editor',
@@ -7,7 +11,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataEditorComponent implements OnInit {
 
-  constructor() { }
+  list$: Observable<Product[]> = this.productService.getAll();
+
+  constructor(
+    private productService: ProductService,
+    private router: Router
+  ) {
+
+   }
 
   ngOnInit(): void {
   }
