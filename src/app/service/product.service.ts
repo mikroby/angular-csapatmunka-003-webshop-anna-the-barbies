@@ -75,7 +75,8 @@ export class ProductService {
     { "id": 65, "catId": 10, "name": "Kisvakond", "description": "kerti munkák, tereprendezés", "image": "kisvakond.jpg", "price": 120000, "stock": 4, "featured": true, "active": true },
     { "id": 66, "catId": 10, "name": "Piroska", "description": "idősgondozás, ételszállítás (arcfelismerésben még fejlődnie kell)", "image": "piroska.jpg", "price": 45000, "stock": 5, "featured": false, "active": true },
     { "id": 67, "catId": 9, "name": "James P. Sullivan", "description": "Booo!...csak ránéz és meg vagy védve", "image": "sullivan.png", "price": 45000, "stock": 5, "featured": true, "active": true },
-    { "id": 68, "catId": 3, "name": "Jancsi és Juliska", "description": "Izgalmas erdei kalandozás. Ebéd a Vasorrú Bábánál!", "image": "jancsi-juliska.png", "price": 100000, "stock": 6, "featured": false, "active": true }]
+    { "id": 68, "catId": 3, "name": "Jancsi és Juliska", "description": "Izgalmas erdei kalandozás. Ebéd a Vasorrú Bábánál!", "image": "jancsi-juliska.png", "price": 100000, "stock": 6, "featured": false, "active": true },
+    { "id": 69, "catId": 6, "name": "Ghostbusters", "description": "kiirtanak mindent: poloskát, szellemet. még a számítógépében is.", "image": "ghosbusters.png", "price": 100000, "stock": 10, "featured": true, "active": true }]
 
   categoryList: Category[] = [
     { "id": 1, "name": "bajnok", "description": "Mert megérdemli! (választható megjelenéssel)" },

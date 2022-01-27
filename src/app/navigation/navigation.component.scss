@@ -1,3 +1,7 @@
+.navbar {
+  background-color: #ffbf00;
+}
+
 .navbar-brand {
   color: white !important;
   text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
@@ -13,6 +17,6 @@ a:hover {
 
 .active {
   color: white !important;
-  text-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0.5rem 0.25rem rgba(0, 0, 0, 0.5);
   font-weight: bold;
 }
