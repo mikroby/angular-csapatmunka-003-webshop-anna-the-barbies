@@ -760,15 +760,6 @@
       "active": true
     }
   ],
-  "keysToFilterBy": [
-    {
-      "name": "név",
-      "description": "leírás",
-      "price": "ár",
-      "stock": "készleten",
-      "featured": "kiemelt hős"
-    }
-  ],
   "categoryList": [
     {
       "id": 1,
@@ -819,6 +810,14 @@
       "id": 10,
       "name": "háztartási alkalmazott",
       "description": "szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás"
+    }
+  ],
+  "keysToFilterBy": [
+    {
+      "name": "név",
+      "price": "ár",
+      "stock": "készleten",
+      "featured": "kiemelt hős"
     }
   ]
 }
