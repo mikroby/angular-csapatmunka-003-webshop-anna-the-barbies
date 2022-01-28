@@ -522,7 +522,7 @@
       "catId": 10,
       "name": "Superman (háztartási)",
       "description": "eldugult a mosogató? ráégett a zsír?",
-      "image": "superman.jpg",
+      "image": "superman.png",
       "price": 1000000,
       "stock": 8,
       "featured": true,
@@ -810,6 +810,14 @@
       "id": 10,
       "name": "háztartási alkalmazott",
       "description": "szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás"
+    }
+  ],
+  "keysToFilterBy": [
+    {
+      "name": "név",
+      "price": "ár",
+      "stock": "készleten",
+      "featured": "kiemelt hős"
     }
   ]
 }

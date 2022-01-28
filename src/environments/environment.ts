@@ -7,9 +7,11 @@ export const environment = {
 
   baseUrl: 'http://localhost:3000/',
 
-  products:'productList',
+  products: 'productList',
 
-  categories: 'categoryList',  
+  categories: 'categoryList',
+
+  keysToFilterBy: 'keysToFilterBy'
 
 };
 

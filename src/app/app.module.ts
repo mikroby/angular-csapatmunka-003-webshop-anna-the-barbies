@@ -22,6 +22,7 @@ import { ProductCardComponent } from './common/product-card/product-card.compone
 import { ProductSliderComponent } from './common/product-slider/product-slider.component';
 import { ProductListComponent } from './common/product-list/product-list.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { SorterPipe } from './pipe/sorter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 
@@ -44,6 +45,7 @@ import { DataEditorComponent } from './page/data-editor/data-editor.component';
     ProductSliderComponent,
     ProductListComponent,
     FilterPipe,
+    SorterPipe,
     AdminComponent,
     DataEditorComponent,
 
