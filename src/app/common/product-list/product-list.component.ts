@@ -11,6 +11,7 @@ import { Product } from 'src/app/model/product';
 export class ProductListComponent implements OnInit {
 
   @Input() list: Product[] = [new Product()];
+  @Input() catPage: number = 0;
 
   categoryName: string = '';
 
@@ -36,7 +37,7 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getCategory(this.list[0].catId).subscribe(
+    this.productService.getCategory(this.catPage).subscribe(
       category => this.categoryName = category.name
     );
   }

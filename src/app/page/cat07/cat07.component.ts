@@ -9,7 +9,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class Cat07Component implements OnInit {
 
-  page:number = 7;
+  catPage:number = 7;
 
   catFeaturedToDisplay: Product[] = [new Product()];
   listByCatId: Product[] = [new Product()];
@@ -20,11 +20,11 @@ export class Cat07Component implements OnInit {
 
   ngOnInit(): void {
 
-    this.productService.getAllFeaturedByCatId(this.page).subscribe(
+    this.productService.getAllFeaturedByCatId(this.catPage).subscribe(
       catFeaturedAll => this.catFeaturedToDisplay = this.productService.getRandom(catFeaturedAll)
     );
 
-    this.productService.getAllbyCatId(this.page).subscribe(
+    this.productService.getAllbyCatId(this.catPage).subscribe(
       allByCatId => this.listByCatId = allByCatId
     );
 
