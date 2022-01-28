@@ -1,7 +1,6 @@
 import { ProductService } from './../../service/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-cat01',
@@ -10,9 +9,10 @@ import { Observable } from 'rxjs';
 })
 export class Cat01Component implements OnInit {
 
-  // catFeaturedAll: Observable<Product[]> = this.productService.getAllFeaturedByCatId(1);
-  // catFeaturedToDisplay: Product[] = this.productService.getRandom(this.catFeaturedAll);
-  listByCatId: Observable<Product[]> = this.productService.getAllbyCatId(1);
+  page:number = 1;
+
+  catFeaturedToDisplay: Product[] = [new Product()];
+  listByCatId: Product[] = [new Product()];
 
   constructor(
     private productService: ProductService,
@@ -20,7 +20,13 @@ export class Cat01Component implements OnInit {
 
   ngOnInit(): void {
 
+    this.productService.getAllFeaturedByCatId(this.page).subscribe(
+      catFeaturedAll => this.catFeaturedToDisplay = this.productService.getRandom(catFeaturedAll)
+    );
 
+    this.productService.getAllbyCatId(this.page).subscribe(
+      allByCatId => this.listByCatId = allByCatId
+    );
 
   }
 
