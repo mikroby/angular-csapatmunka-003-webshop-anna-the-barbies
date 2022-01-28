@@ -57,7 +57,7 @@ export class ProductService {
     { "id": 45, "catId": 4, "name": "Csipkerózsika", "description": "a kellemes alvás szakértője", "image": "csipkerozsika.jpg", "price": 280000, "stock": 1, "featured": false, "active": true },
     { "id": 46, "catId": 1, "name": "Legolas", "description": "tünde szeme messze lát", "image": "legolas.png", "price": 800000, "stock": 1, "featured": false, "active": true },
     { "id": 47, "catId": 9, "name": "Csavardi Samu", "description": "soha el nem hagy!", "image": "csavardi-samu.png", "price": 78000, "stock": 3, "featured": true, "active": true },
-    { "id": 48, "catId": 10, "name": "Superman (háztartási)", "description": "eldugult a mosogató? ráégett a zsír?", "image": "superman.jpg", "price": 1000000, "stock": 8, "featured": true, "active": true },
+    { "id": 48, "catId": 10, "name": "Superman (háztartási)", "description": "eldugult a mosogató? ráégett a zsír?", "image": "superman.png", "price": 1000000, "stock": 8, "featured": true, "active": true },
     { "id": 49, "catId": 5, "name": "Pityke Őrmester", "description": "Marcipán-nal az igazi!", "image": "pityke-ormester.png", "price": 50000, "stock": 5, "featured": true, "active": true },
     { "id": 50, "catId": 10, "name": "Hamupipőke", "description": "kiborult a mák? reggelre mindennel is meglesz!", "image": "hamupipoke.jpg", "price": 9990, "stock": 1, "featured": true, "active": true },
     { "id": 51, "catId": 6, "name": "Mézga Aladár", "description": "1 forintért megmondja!", "image": "mezga-aladar2.png", "price": 120000, "stock": 1, "featured": true, "active": true },
