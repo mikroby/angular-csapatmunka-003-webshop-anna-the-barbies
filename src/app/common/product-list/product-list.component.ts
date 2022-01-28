@@ -18,6 +18,21 @@ export class ProductListComponent implements OnInit {
 
   filterKey: string = '';
 
+  sortKey: string = '';
+
+  direction: number = 1;
+
+  // ha megy a JSON service:
+  // keys: string[][] = Object.entries(this.productService.getKeysToFilterBy());
+  keys: string[][] =
+    [
+      ["name", "név"],
+      ["description", "leírás"],
+      ["price", "ár"],
+      ["stock", "készleten"],
+      ["featured", "kiemelt hős"]
+    ]
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {

@@ -760,6 +760,15 @@
       "active": true
     }
   ],
+  "keysToFilterBy": [
+    {
+      "name": "név",
+      "description": "leírás",
+      "price": "ár",
+      "stock": "készleten",
+      "featured": "kiemelt hős"
+    }
+  ],
   "categoryList": [
     {
       "id": 1,

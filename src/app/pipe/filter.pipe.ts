@@ -5,7 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterPipe<T extends { [key: string]: any }> implements PipeTransform {
 
-  transform(value: T[] | null, phrase: string = '', key: string = ''): T[] | null {
+  transform(value: T[] | null, phrase: string = '', key: string = '', sortingBy: string = '', direction:number): T[] | null {
+    
     if (!Array.isArray(value) || !phrase) {
       return value;
     }
