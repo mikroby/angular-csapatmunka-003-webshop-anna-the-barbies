@@ -1,45 +1,48 @@
-<div class="row">
+<!-- <div class="row">
   <div class="col-10">
-    <a routerLink="/hero/add" class="btn btn-block btn-success">új Hős hozzáadása</a>
+    <a routerLink="/hero/add" class="btn btn-block btn-light">új Hős hozzáadása</a>
   </div>
-</div>
+</div> -->
 <div class="row">
   <div class="col-12">
-        <table class="tabel table-striped">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>catId</th>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Featured</th>
-            <th>Active</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="product of list$ | async">
-            <td>{{product.id}}</td>
-            <td>{{product.catId}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.description}}</td>
-            <td>{{product.image}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.stock}}</td>
-            <td>{{product.featured}}</td>
-            <td>{{product.active}}</td>
-            <td>
-              <button class= "btn btn-info"><i class="fa fa-pencil"></i></button>
-              <button class= "btn btn-success"><i class="fa fa-floppy-o"></i></button>
-              <button class= "btn btn-danger"><i class="fa fa-trash"></i></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>catId</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Featured</th>
+          <th>Active</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of list$ | async">
+          <td>{{product.id}}</td>
+          <td>{{product.catId}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.image}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.stock}}</td>
+          <td>{{product.featured}}</td>
+          <td>{{product.active}}</td>
+          <td>
+            <button class="btn btn-info"><i class="fa fa-pencil"></i></button>
+          </td>
+          <td>
+            <button class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
+          </td>
+          <td>
+            <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-
-
