@@ -111,12 +111,11 @@ export class ProductService {
   getOne(id: string | number): Observable<Product> {
     return this.http.get<Product>(`${this.baseUrl}${this.products}/${id}`);
   }
-  //ez nincs meg:
-  getAllFeaturedByCatId(catId: string | number): Product[] {
-    return this.http.get<Product[]>(`${this.baseUrl}${this.products}/${this.products}?catId=${catId}&featured=true`);
+  getAllFeaturedByCatId(catId: string | number): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}${this.products}?catId=${catId}&featured=true`);
   }
-  getFeaturedAll(product: Product): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.baseUrl}${this.products}/${product.featured}`);
+  getFeaturedAll(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}${this.products}?featured=true`);
   }
   getAllbyCatId(catId: string | number): Observable<Product[]> {
     return this.http.get<Product[]>(`${this.baseUrl}${this.products}?catId=${catId}`);
@@ -127,7 +126,7 @@ export class ProductService {
   getAllCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.baseUrl}${this.categories}`);
   }
-  // ebbe még bele se kezdtem:
+
   getRandom(list: Product[], num: number = 5): Product[] {
     num = num > list.length ? list.length : num;
     const copyList = [...list];
@@ -165,10 +164,8 @@ export class ProductService {
   removeProduct(product: Product): Observable<any> {
     return this.http.delete(`${this.baseUrl}${this.products}/${product.id}`);
   }
-  // product = product.id ? product.id : product;
 
   removeCategory(category: Category): Observable<any> {
-    // category = category.id ? category.id : category;
     return this.http.delete(`${this.baseUrl}${this.categories}/${category.id}`);
   }
 
