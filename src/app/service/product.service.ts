@@ -1,6 +1,9 @@
+import { HttpClient } from '@angular/common/http'
+import { environment } from './../../environments/environment';
 import { Injectable } from '@angular/core';
 import { Category } from '../model/category';
 import { Product } from '../model/product';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -94,26 +97,37 @@ export class ProductService {
 
   // idáig törölhető ha kész a service.
 
-  constructor() { }
+  baseUrl: string = environment.baseUrl;
+  products: string = 'productList';
+  categories: string = 'categoryList';
 
-  getAll(): Product[] {
-    return this.productList;
+  constructor(
+    private http: HttpClient,
+  ) { }
+
+  getAll(): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}${this.products}`);
   }
-  getOne(id: string | number): Product {
-    return this.productList.filter(product => product.id === Number(id))[0];
+  getOne(id: string | number): Observable<Product> {
+    return this.http.get<Product>(`${this.baseUrl}${this.products}/${id}`);
   }
+  //ez nincs meg:
   getAllFeaturedByCatId(catId: string | number): Product[] {
     return this.productList.filter(product => product.catId === Number(catId) && product.featured);
   }
-  getFeaturedAll(): Product[] {
-    return this.productList.filter(product => product.featured)
+  getFeaturedAll(product: Product): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}${this.products}/${product.featured}`);
   }
-  getAllbyCatId(catId: string | number): Product[] {
-    return this.productList.filter(product => product.catId === Number(catId));
+  getAllbyCatId(catId: string | number): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.baseUrl}${this.products}/${catId}`);
   }
-  getCategory(catId: string | number): Category {
-    return this.categoryList.filter(category => category.id === Number(catId))[0];
+  getCategory(id: string | number): Observable<Category> {
+    return this.http.get<Category>(`${this.baseUrl}${this.categories}/${id}`);
   }
+  getAllCategories(): Observable<Category[]> {
+    return this.http.get<Category[]>(`${this.baseUrl}${this.categories}`);
+  }
+  // ebbe még bele se kezdtem:
   getRandom(list: Product[], num: number = 5): Product[] {
     num = num > list.length ? list.length : num;
     const copyList = [...list];
@@ -124,6 +138,38 @@ export class ProductService {
       copyList.splice(index, 1);
     }
     return result;
+  }
+
+  addProduct(product: Product): Observable<any> {
+    return this.http.post<Observable<any>>(`${this.baseUrl}${this.products}`, product);
+  }
+
+  addCategory(category: Category): Observable<any> {
+    return this.http.post<Observable<any>>(`${this.baseUrl}${this.products}`, category);
+  }
+
+  updateProduct(product: Product): Observable<Product> {
+    return this.http.patch<Product>(
+      `${this.baseUrl}${this.products}/${product.id}`,
+      product
+    );
+  }
+
+  updateCategory(category: Category): Observable<Category> {
+    return this.http.patch<Category>(
+      `${this.baseUrl}${this.categories}/${category.id}`,
+      category
+    );
+  }
+
+  removeProduct(product: any): Observable<any> {
+    product = product.id ? product.id : product;
+    return this.http.delete(`${this.baseUrl}${this.products}/${product}`);
+  }
+
+  removeCategory(category: any): Observable<any> {
+    category = category.id ? category.id : category;
+    return this.http.delete(`${this.baseUrl}${this.categories}/${category}`);
   }
 
 }
