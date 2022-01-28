@@ -1,8 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Observable, switchMap } from 'rxjs';
 import { Product } from 'src/app/model/product';
-import { ProductService } from 'src/app/service/product.service';
+
 @Component({
   selector: 'app-product-card',
   templateUrl: './product-card.component.html',
@@ -14,10 +12,7 @@ export class ProductCardComponent implements OnInit {
  
   src: string = "";
 
-  constructor(
-    private ar: ActivatedRoute,
-    private productService: ProductService
-    ) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.src=`/assets/img/${this.currentProduct.image}`;
