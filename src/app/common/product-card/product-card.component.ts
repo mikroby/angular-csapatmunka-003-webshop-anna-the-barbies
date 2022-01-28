@@ -10,11 +10,8 @@ import { ProductService } from 'src/app/service/product.service';
 })
 
 export class ProductCardComponent implements OnInit {
-  // @Input() currentProduct: Product = new Product();
-  currentProduct$: Observable<Product> = this.ar.params.pipe(
-    switchMap( params => this.productService.getOne(params['id'])),
-  );
-
+  @Input() currentProduct: Product = new Product();
+ 
   src: string = "";
 
   constructor(

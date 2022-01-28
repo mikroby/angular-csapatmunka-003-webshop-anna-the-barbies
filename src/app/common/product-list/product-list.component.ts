@@ -19,13 +19,13 @@ export class ProductListComponent implements OnInit {
   filterKey: string = '';
 
   direction: number = 1;
-  dirText: string[] = ['növekvő','csökkenő'];
+  dirText: string[] = ['növekvő', 'csökkenő'];
 
   // ha majd megy a JSON service és van getKeysToFilterBy() is:
   // keys: string[][] = Object.entries(this.productService.getKeysToFilterBy());
   keys: string[][] =
     [
-      ["name", "név"],      
+      ["name", "név"],
       ["price", "ár"],
       ["stock", "készleten"],
       ["featured", "kiemelt hős"]
@@ -36,11 +36,13 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.categoryName = this.productService.getCategory(this.list[0].catId).name;
+    this.productService.getCategory(this.list[0].catId).subscribe(
+      category => this.categoryName = category.name
+    );
   }
 
   changeSortDirection(): void {
     this.direction *= -1;
-    [this.dirText[0], this.dirText[1]] = [this.dirText[1], this.dirText[0]];    
+    [this.dirText[0], this.dirText[1]] = [this.dirText[1], this.dirText[0]];
   }
 }

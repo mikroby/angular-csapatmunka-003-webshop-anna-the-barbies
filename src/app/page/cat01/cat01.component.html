@@ -1,5 +1,10 @@
 <!-- featured slider -->
 <h3 class="text-center mt-2">Kiemelt ajánlatunk:</h3>
-<app-product-slider [list]="catFeaturedToDisplay"></app-product-slider>
 
-<app-product-list [list]="listByCatId"></app-product-list>
+<ng-container *ngIf="catFeaturedToDisplay">
+  <app-product-slider [list]="catFeaturedToDisplay"></app-product-slider>
+</ng-container>
+
+<ng-container *ngIf="listByCatId">
+  <app-product-list [list]="listByCatId"></app-product-list>
+</ng-container>

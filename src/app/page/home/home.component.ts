@@ -9,17 +9,24 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  allFeatured: Product[] = this.productService.getFeaturedAll();
-  featuredToDisplay: Product[] = this.productService.getRandom(this.allFeatured);
-  allProduct: Product[] = this.productService.getAll();
-  discountToDisplay: Product[] = this.productService.getRandom(this.allProduct);
   
+  featuredToDisplay: Product[]=[new Product()];
+  discountToDisplay: Product[]=[new Product()];
+
   constructor(
     private productService: ProductService,
   ) { }
 
   ngOnInit(): void {
+
+    this.productService.getFeaturedAll().subscribe(
+      allFeatured => this.featuredToDisplay = this.productService.getRandom(allFeatured)
+    );
+    
+    this.productService.getAll().subscribe(
+      allProducts=> this.discountToDisplay = this.productService.getRandom(allProducts)
+    );
+
   }
 
 }
