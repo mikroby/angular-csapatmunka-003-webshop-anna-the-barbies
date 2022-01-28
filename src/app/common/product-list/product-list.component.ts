@@ -17,21 +17,21 @@ export class ProductListComponent implements OnInit {
   phrase: string = '';
 
   filterKey: string = '';
-
-  sortKey: string = '';
-
+  
   direction: number = 1;
-
-  // ha megy a JSON service:
+  
+  // ha majd megy a JSON service:
   // keys: string[][] = Object.entries(this.productService.getKeysToFilterBy());
   keys: string[][] =
-    [
-      ["name", "név"],
-      ["description", "leírás"],
-      ["price", "ár"],
-      ["stock", "készleten"],
-      ["featured", "kiemelt hős"]
-    ]
+  [
+    ["name", "név"],
+    ["description", "leírás"],
+    ["price", "ár"],
+    ["stock", "készleten"],
+    ["featured", "kiemelt hős"]
+  ];
+
+  sortKey: string = this.keys[0][0];
 
   constructor(private productService: ProductService) { }
 
