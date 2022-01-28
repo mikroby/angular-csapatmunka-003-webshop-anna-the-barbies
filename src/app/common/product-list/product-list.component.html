@@ -17,7 +17,7 @@
       <select [(ngModel)]="filterKey" class="custom-select">
         <option value="">bármilyen egyezés</option>
         <option *ngFor="let key of keys" [value]="key[0]">
-          {{ key[1] |titlecase }}
+          {{ key[1] | titlecase }}
         </option>
       </select>
 
