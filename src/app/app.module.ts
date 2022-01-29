@@ -56,8 +56,7 @@ import { CategoryPolisherComponent } from './page/category-polisher/category-pol
     AddCategoryComponent,
     CategoryEditorComponent,
     CategoryPolisherComponent,
-
-  ],
+],
   imports: [
     BrowserModule,
     AppRoutingModule,
