@@ -1,1 +1,81 @@
-<p>add-product works!</p>
+<h2 class="text-center my-5">új Hős hozzáadása</h2>
+
+<div class="row">
+  <div class="col-12 add-product">
+    <form #productForm="ngForm">
+
+      <input [(ngModel)]="product.id" name="id" type="hidden">
+
+      <div class="form-group">
+        <label for="productCatId"> Kategória ID </label>
+        <input [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
+          placeholder="Milyen kategóriában indul a hős?" required>
+        <!-- <option *ngFor="let category of categories | async" [[value]="category">
+            {{ category}} </option> -->
+        <div class="error-message" [hidden]="productForm.controls['catId']?.valid">
+          Egy rendes hősnek legyen kategóriája!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="productName"> Név </label>
+        <input [(ngModel)]="product.name" class="form-control" name="productName" id="productCatId" type="text"
+          placeholder="Add meg a hős nevét!" required>
+        <div class="error-message" [hidden]="productForm.controls['name']?.valid">
+          Egy rendes hősnek legyen neve!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productDescription"> Miben erős a hős? </label>
+        <input [(ngModel)]="product.description" class="form-control" name="productDescription" id="productDescription"
+          type="text" placeholder="Add meg a hős képességeit!" required>
+        <div class="error-message" [hidden]="productForm.controls['description']?.valid">
+          Egy rendes hősnek legyen szuperképessége!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productImage"> Hogyan fest a hősünk? </label>
+        <input [(ngModel)]="product.image" class="form-control" name="productImage" id="productImage" type="text"
+          placeholder="Add meg a hős képének nevét!" required>
+        <div class="error-message" [hidden]="productForm.controls['image']?.valid">
+          Egy rendes hősnek legyen képe megjelenni!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productPrice"> Mibe kerül a hősiessége? </label>
+        <input [(ngModel)]="product.price" class="form-control" name="productPrice" id="productPrice" type="number"
+          placeholder="Add meg a hős közbevatakozásánka árát!" required>
+        <div class="error-message" [hidden]="productForm.controls['price']?.valid">
+          Egy rendes hősnek nincsen ára!(?)
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productStock"> Hány példányban elérhető? </label>
+        <input [(ngModel)]="product.stock" class="form-control" name="productStock" id="productStock" type="number"
+          placeholder="Add meg a hős példányszámát!" required>
+        <div class="error-message" [hidden]="productForm.controls['stock']?.valid">
+          Egy rendes hősről tudni kell hányan van!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productFeatured"> Kiemelt hőst regisztrálsz? </label>
+        <input [(ngModel)]="product.featured" class="form-control" name="productFeatured" id="productFeatured"
+          type="text" placeholder="Add meg a hős példányszámát!" required>
+        <div class="error-message" [hidden]="productForm.controls['featured']?.valid">
+          Egy rendes hősről tudni kell kiemelt-e!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productActive"> Jelenleg aktív a hős? </label>
+        <input [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive" type="text"
+          placeholder="Add meg a hős példányszámát!" required>
+        <div class="error-message" [hidden]="productForm.controls['active']?.valid">
+          Egy rendes hősről tudni kell aktív-e!
+        </div>
+      </div>
+
+      <button [disabled]="!productForm.form.valid" type="submit" class="btn btn-success">Mentés</button>
+    </form>
+     </div>
+</div>
+

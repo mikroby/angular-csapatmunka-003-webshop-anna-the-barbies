@@ -1,29 +1,38 @@
 <div class="row">
-  <div class="col-12">
-    <a routerLink="/add-product" class="btn btn-block btn-light">új Hős hozzáadása</a>
+  <div class="col-12 my-5">
+    <a routerLink="/add-product" class="btn btn-light btn-block btn-lg">új Hős hozzáadása</a>
   </div>
 </div>
-<div class="row editor col-auto">
-
-  <div class="col-12 mt-3 pt-1 pb-1 d-flex justify-content-around">
-
-    <!-- <span class="text-bold">#</span> -->
-    <span class="text-bold">catID</span>
-    <span class="text-bold">Name</span>
-    <span class="text-bold">Description</span>
-    <span class="text-bold">Image</span>
-    <span class="text-bold">Price</span>
-    <span class="text-bold">Stock</span>
-    <span class="text-bold">Featured</span>
-    <span class="text-bold">Active</span>
-    <span class="text-bold">Actions</span>
-
-</div>
-<div class="row" *ngFor="let row of list$ | async">
-  <div class="col-auto mt-1">
-    <app-row [row]="row" (selectClick)="onSelectClick($event)" (updateClick)="onUpdateClick($event)"
-     (deleteClick)="onDeleteClick($event)">
-  </app-row>
+<div class="row">
+  <div class="col-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
+          <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of list$ | async">
+          <td>{{product.id}}</td>
+          <td>{{product.catId}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.description}}</td>
+          <td>{{product.image}}</td>
+          <td>{{product.price}}</td>
+          <td>{{product.stock}}</td>
+          <td>{{product.featured}}</td>
+          <td>{{product.active}}</td>
+          <td>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
+            <button type="button" class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
+            <button type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 </div>
