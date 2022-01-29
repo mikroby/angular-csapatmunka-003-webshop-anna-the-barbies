@@ -758,6 +758,17 @@
       "stock": 10,
       "featured": true,
       "active": true
+    },
+    {
+      "id": 70,
+      "catId": 5,
+      "name": "Derrick és Harry",
+      "description": "német precizitás, happy-end",
+      "image": "derrick.png",
+      "price": 100000,
+      "stock": 2,
+      "featured": true,
+      "active": true
     }
   ],
   "categoryList": [
