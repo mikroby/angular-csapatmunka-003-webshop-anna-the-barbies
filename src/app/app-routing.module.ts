@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { AddProductComponent } from './page/add-product/add-product.component';
 import { AdminComponent } from './page/admin/admin.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
@@ -66,6 +68,10 @@ const routes: Routes = [
   {
     path: 'data-editor',
     component: DataEditorComponent,
+  },
+  {
+    path: 'add-product',
+    component: AddProductComponent,
   },
   {
     path: '**',
