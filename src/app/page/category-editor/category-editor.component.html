@@ -1,0 +1,35 @@
+<div class="row" id="top">
+  <div class="col-12 my-5">
+    <a routerLink="/add-category" class="btn btn-light btn-block btn-lg">új kategória hozzáadása</a>
+  </div>
+</div>
+<div class="row">
+  <div class="col-8">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
+          <th></th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of list$ | async">
+          <td>{{category.id}}</td>
+          <td>{{category.name}}</td>
+          <td>{{category.description}}</td>
+          <td>
+            <div class="btn-group" role="group">
+            <button  type="button" class="btn btn-info"><i class="fa fa-eye"></i></button>
+
+            <button (click)="onRemoveCategory(category)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <app-category-polisher></app-category-polisher>
+  </div>
+</div>
+
+
+
