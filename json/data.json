@@ -758,6 +758,17 @@
       "stock": 10,
       "featured": true,
       "active": true
+    },
+    {
+      "id": 70,
+      "catId": 2,
+      "name": "Olaf",
+      "description": "rafinált szemfényvesztő: tudja, hogy ki az, akiért érdemes elolvadni",
+      "image": "olaf.png",
+      "price": 10000,
+      "stock": 2,
+      "featured": "false",
+      "active": true
     }
   ],
   "categoryList": [

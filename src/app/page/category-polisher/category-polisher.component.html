@@ -1,0 +1,17 @@
+<div class="row">
+  <div *ngIf="category$ | async " class="col-4">
+    <form #categoryForm="ngForm" (ngSubmit)="onUpdateCategory(category)">
+      <input [(ngModel)]="category.id" type="hidden" name="id">
+      <div class="form-group">
+        <label for="categoryName">Name</label>
+        <input required [(ngModel)]="category.name" class="form-control" type="text" name="name" id="categoryName">
+        <div class="form-group">
+          <label for="categoryDescription">Price</label>
+          <input required [(ngModel)]="category.description" class="form-control" type="text" name="description" id="categoryDescription">
+        </div>
+      </div>
+      <button [disabled]="categoryForm.invalid" type="submit" class="btn btn-primary btn-block"><i
+          class="fa fa-floppy-o"></i></button>
+      </form>
+  </div>
+</div>

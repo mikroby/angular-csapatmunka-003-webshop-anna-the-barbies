@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-12 add-product">
-    <form #productForm="ngForm">
+    <form #productForm="ngForm" (ngSubmit)="onAddProduct(product)">
 
       <input [(ngModel)]="product.id" name="id" type="hidden">
 
@@ -74,7 +74,7 @@
         </div>
       </div>
 
-      <button [disabled]="!productForm.form.valid" type="submit" class="btn btn-success">Mentés</button>
+      <button [disabled]="!productForm.valid" type="submit" class="btn btn-success">Mentés</button>
     </form>
      </div>
 </div>

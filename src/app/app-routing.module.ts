@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddCategoryComponent } from './page/add-category/add-category.component';
 
 import { AddProductComponent } from './page/add-product/add-product.component';
 import { AdminComponent } from './page/admin/admin.component';
@@ -13,6 +14,8 @@ import { Cat07Component } from './page/cat07/cat07.component';
 import { Cat08Component } from './page/cat08/cat08.component';
 import { Cat09Component } from './page/cat09/cat09.component';
 import { Cat10Component } from './page/cat10/cat10.component';
+import { CategoryEditorComponent } from './page/category-editor/category-editor.component';
+import { CategoryPolisherComponent } from './page/category-polisher/category-polisher.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 import { HomeComponent } from './page/home/home.component';
 
@@ -74,6 +77,18 @@ const routes: Routes = [
     component: AddProductComponent,
   },
   {
+    path: 'add-category',
+    component: AddCategoryComponent,
+  },
+  {
+    path: 'category-editor',
+    component: CategoryEditorComponent,
+  },
+  {
+    path: 'category-polisher',
+    component: CategoryPolisherComponent,
+  },
+    {
     path: '**',
     component: HomeComponent,
   }

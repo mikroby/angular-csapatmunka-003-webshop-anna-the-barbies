@@ -26,6 +26,9 @@ import { SorterPipe } from './pipe/sorter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 import { AddProductComponent } from './page/add-product/add-product.component';
+import { AddCategoryComponent } from './page/add-category/add-category.component';
+import { CategoryEditorComponent } from './page/category-editor/category-editor.component';
+import { CategoryPolisherComponent } from './page/category-polisher/category-polisher.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,9 @@ import { AddProductComponent } from './page/add-product/add-product.component';
     AdminComponent,
     DataEditorComponent,
     AddProductComponent,
+    AddCategoryComponent,
+    CategoryEditorComponent,
+    CategoryPolisherComponent,
 
   ],
   imports: [

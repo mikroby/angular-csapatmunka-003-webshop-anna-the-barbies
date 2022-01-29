@@ -14,7 +14,7 @@ export class AddProductComponent implements OnInit {
   product = new Product();
 
   product$: Observable<Product> = this.activatedRoute.params.pipe(
-    switchMap( params => this.productService.getOne(params['id']))
+    switchMap(params => this.productService.getOne(params['id']))
   )
   // categories: string[] =
 
@@ -25,6 +25,12 @@ export class AddProductComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+  }
+  onAddProduct(product: Product): void {
+    this.productService.addProduct(product).subscribe(
+      product => this.router.navigate(['/data-editor']),
+      err => console.error(err)
+    );
   }
 
 }

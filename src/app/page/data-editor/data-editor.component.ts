@@ -17,11 +17,21 @@ export class DataEditorComponent implements OnInit {
   constructor(
     private productService: ProductService,
     private router: Router
-  ) {
-
-   }
+  ) { }
 
   ngOnInit(): void {
+  }
+  onRemoveProduct(product: Product): void {
+    this.productService.removeProduct(product).subscribe(
+      product => this.router.navigate(['/admin']),
+      err => console.error(err)
+    );
+  }
+  onUpdateProduct(product: Product): void {
+    this.productService.updateProduct(product).subscribe(
+      product => this.router.navigate(['/admin']),
+      err => console.error(err)
+    );
   }
 
 }
