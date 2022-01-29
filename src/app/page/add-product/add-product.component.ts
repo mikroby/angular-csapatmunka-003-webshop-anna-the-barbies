@@ -1,4 +1,8 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { Observable, switchMap } from 'rxjs';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -7,7 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductComponent implements OnInit {
 
-  constructor() { }
+  product = new Product();
+
+  product$: Observable<Product> = this.activatedRoute.params.pipe(
+    switchMap( params => this.productService.getOne(params['id']))
+  )
+  // categories: string[] =
+
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private productService: ProductService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
