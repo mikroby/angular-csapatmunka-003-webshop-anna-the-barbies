@@ -25,6 +25,7 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
+import { AddProductComponent } from './page/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { DataEditorComponent } from './page/data-editor/data-editor.component';
     SorterPipe,
     AdminComponent,
     DataEditorComponent,
+    AddProductComponent,
 
   ],
   imports: [

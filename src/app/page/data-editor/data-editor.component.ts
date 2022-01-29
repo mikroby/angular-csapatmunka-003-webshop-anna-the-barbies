@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class DataEditorComponent implements OnInit {
 
   list$: Observable<Product[]> = this.productService.getAll();
+  keys: string[] = Object.keys(new Product());
 
   constructor(
     private productService: ProductService,
