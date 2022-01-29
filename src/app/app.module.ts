@@ -25,6 +25,12 @@ import { FilterPipe } from './pipe/filter.pipe';
 import { SorterPipe } from './pipe/sorter.pipe';
 import { AdminComponent } from './page/admin/admin.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
+import { ActionButtonGroupComponent } from './common/action-button-group/action-button-group.component';
+import { ActionButtonComponent } from './common/action-button/action-button.component';
+import { IconComponent } from './common/icon/icon.component';
+import { CellComponent } from './common/cell/cell.component';
+import { RowComponent } from './common/row/row.component';
+import { AddProductComponent } from './page/add-product/add-product.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +54,13 @@ import { DataEditorComponent } from './page/data-editor/data-editor.component';
     SorterPipe,
     AdminComponent,
     DataEditorComponent,
+    ActionButtonGroupComponent,
+    ActionButtonComponent,
+    IconComponent,
+    CellComponent,
+    RowComponent,
+    AddProductComponent
+
 
   ],
   imports: [
