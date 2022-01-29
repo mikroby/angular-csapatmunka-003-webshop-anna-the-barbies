@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AddProductComponent } from './page/add-product/add-product.component';
 import { AdminComponent } from './page/admin/admin.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
@@ -15,6 +14,7 @@ import { Cat09Component } from './page/cat09/cat09.component';
 import { Cat10Component } from './page/cat10/cat10.component';
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 import { HomeComponent } from './page/home/home.component';
+import { AddProductComponent } from './page/add-product/add-product.component';
 
 const routes: Routes = [
   {

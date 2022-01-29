@@ -50,7 +50,6 @@ import { AddProductComponent } from './page/add-product/add-product.component';
     AdminComponent,
     DataEditorComponent,
     AddProductComponent,
-
   ],
   imports: [
     BrowserModule,

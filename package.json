@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve",    
+    "build": "ng build",    
     "test": "ng test",
     "test:01": "ng test --include=**/location.spec.ts",
     "test:02": "ng test --include=**/event.spec.ts",
@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "bootstrap": "^4.6.1",
+    "concurrently": "^7.0.0",
     "fontawesome-4.7": "^4.7.0",
     "json-server": "^0.17.0",
     "rxjs": "~7.4.0",

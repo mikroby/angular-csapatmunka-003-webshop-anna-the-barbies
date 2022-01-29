@@ -47,13 +47,13 @@ export class ProductService {
   getRandom(list: Product[], num: number = 5): Product[] {
     num = num > list.length ? list.length : num;
     const copyList = [...list];
-    const result: Product[] = [];
+    const result = [];
     for (let i = 0; i < num; i++) {
       const index = Math.floor(Math.random() * copyList.length);
       result.push(copyList[index]);
       copyList.splice(index, 1);
     }
-    return result;
+    return result as Product[];
   }
 
   addProduct(product: Product): Observable<any> {
