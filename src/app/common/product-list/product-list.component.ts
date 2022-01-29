@@ -1,6 +1,7 @@
 import { ProductService } from 'src/app/service/product.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/model/product';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -21,25 +22,24 @@ export class ProductListComponent implements OnInit {
 
   direction: number = 1;
   dirText: string[] = ['növekvő', 'csökkenő'];
-
-  // ha majd megy a JSON service és van getKeysToFilterBy() is:
-  // keys: string[][] = Object.entries(this.productService.getKeysToFilterBy());
-  keys: string[][] =
-    [
-      ["name", "név"],
-      ["price", "ár"],
-      ["stock", "készleten"],
-      ["featured", "kiemelt hős"]
-    ];
-
-  sortKey: string = this.keys[0][0];
-
+  
+  keys!: string[][];
+  
+  sortKey!: string;
+  
   constructor(private productService: ProductService) { }
-
+  
   ngOnInit(): void {
     this.productService.getCategory(this.catPage).subscribe(
       category => this.categoryName = category.name
+      );
+            
+    this.productService.getKeysToFilterBy().subscribe(
+      allKeys => {        
+        this.keys = Object.entries(allKeys[0])
+        this.sortKey = this.keys[0][0];}
     );
+
   }
 
   changeSortDirection(): void {

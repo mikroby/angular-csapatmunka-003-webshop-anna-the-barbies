@@ -40,8 +40,8 @@ export class ProductService {
   getAllCategories(): Observable<Category[]> {
     return this.http.get<Category[]>(`${this.baseUrl}${this.categories}`);
   }
-  getKeysToFilterBy(): Observable<string[][]> {
-    return this.http.get<string[][]>(`${this.baseUrl}${this.keysToFilterBy}`)
+  getKeysToFilterBy(): Observable<Object[]> {
+    return this.http.get<Object[]>(`${this.baseUrl}${this.keysToFilterBy}`)
   }
 
   getRandom(list: Product[], num: number = 5): Product[] {
