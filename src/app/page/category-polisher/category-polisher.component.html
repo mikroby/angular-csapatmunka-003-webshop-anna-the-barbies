@@ -1,5 +1,5 @@
 <div class="row">
-  <div *ngIf="category$ | async " class="col-4">
+  <div *ngIf="category$ | async as category " class="col-4">
     <form #categoryForm="ngForm" (ngSubmit)="onUpdateCategory(category)">
       <input [(ngModel)]="category.id" type="hidden" name="id">
       <div class="form-group">

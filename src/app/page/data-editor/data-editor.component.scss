@@ -1,9 +1,21 @@
 .table {
-  background-color: rgba(255,255,255,0.9);
-  }
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
 a.btn.btn-block.add {
   background-color: #1b5054;
   color: #fff;
   font-size: large;
 
 }
+
+input[type=number] {
+  width: 120%;
+}
+
+input {
+  border-radius: 4px;
+  border: 1px;
+  }
+
+
