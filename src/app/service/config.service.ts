@@ -14,7 +14,7 @@ export class ConfigService {
   appName: string = 'Hero-Hire';
 
   menuItems: IMenuItem[] = [
-    { text: 'Home', link: '/', icon: 'home' },
+    // { text: 'Home', link: '/', icon: 'home' },
     { text: 'Bajnok', link: '/cat01' },
     { text: 'Bajkeverő', link: '/cat02' },
     { text: 'Utazásszervezés', link: '/cat03' },
@@ -25,9 +25,7 @@ export class ConfigService {
     { text: 'Pénzügyi megoldások', link: '/cat08' },
     { text: 'Őrzés-védelem', link: '/cat09' },
     { text: 'Háztartási alkalmazott', link: '/cat10' },
-    {
-      text: '', link: '/admin', icon: 'fa fa-user'
-    },
+    { text: '', link: '/admin', icon: 'fa fa-user' },
   ];
 
   constructor() { }
