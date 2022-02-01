@@ -770,7 +770,7 @@
       "featured": true,
       "active": true
     },
-{
+    {
       "id": 71,
       "catId": 2,
       "name": "Olaf",
@@ -780,7 +780,7 @@
       "stock": 2,
       "featured": "false",
       "active": true
- }
+    }
   ],
   "categoryList": [
     {
