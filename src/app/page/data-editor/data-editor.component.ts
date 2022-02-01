@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-data-editor',
   templateUrl: './data-editor.component.html',
@@ -13,14 +14,17 @@ export class DataEditorComponent implements OnInit {
 
   list$: Observable<Product[]> = this.productService.getAll();
   keys: string[] = Object.keys(new Product());
+  disabled: boolean = true;
 
   constructor(
     private productService: ProductService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
+
   }
+
   onRemoveProduct(product: Product): void {
     this.productService.removeProduct(product).subscribe(
       product => this.router.navigate(['/admin']),

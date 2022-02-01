@@ -13,6 +13,7 @@ export class CategoryEditorComponent implements OnInit {
 
   list$: Observable<Category[]> = this.productService.getAllCategories();
   keys: string[] = Object.keys(new Category());
+  disabled: boolean = true;
 
   constructor(
     private productService: ProductService,

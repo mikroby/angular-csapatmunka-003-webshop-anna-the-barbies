@@ -6,7 +6,7 @@
 </div>
 <div class="row">
   <div class="col-12">
-    <table class="table table-sm">
+    <table class="table table-responsive-sm">
       <thead>
         <tr>
           <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
@@ -15,27 +15,28 @@
       </thead>
       <tbody>
         <tr *ngFor="let product of list$ | async">
-          <td> <input type="number" name="id" [value]="product.id" oninput="this.size = this.value.length" disabled="disabled"></td>
-          <td> <input type="number" name="catDd" [value]="product.catId"></td>
-          <td> <input type="text" name="name" [value]="product.name"></td>
-          <td><input type="textarea" name="description" [value]="product.description"></td>
-          <td><input type="text" name="image" [value]="product.image"></td>
-          <td><input type="number" name="price" [value]="product.price"></td>
-          <td><input type="number" name="stock" [value]="product.stock"></td>
-          <td><select name="featured" [value]="product.featured">
+          <td> {{product.id}}</td>
+          <td><input type="number" name="catId" [value]="product.catId" [disabled]="disabled"></td>
+          <td><input type="text" name="name" [value]="product.name" [disabled]="disabled"></td>
+          <td><input type="textarea" name="description" [value]="product.description" [disabled]="disabled"></td>
+          <td><input type="text" name="image" [value]="product.image" [disabled]="disabled"></td>
+          <td><input type="number" name="price" [value]="product.price" [disabled]="disabled"></td>
+          <td><input type="number" name="stock" [value]="product.stock" [disabled]="disabled"></td>
+          <td><select name="featured" [value]="product.featured" [disabled]="disabled">
             <option value="true">kiemelt</option>
             <option value="false">nem kiemelt</option>
           </select>
             </td>
-          <td><select name="active" [value]="product.active">
+          <td><select name="active" [value]="product.active" [disabled]="disabled">
             <option value="true">aktív</option>
             <option value="false">inaktív</option>
           </select></td>
                     <td>
             <div class="btn-group" role="group">
-            <button type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
+            <button  (click)="disabled=false" type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
             <button (click)="onUpdateProduct(product)"type="button" class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
             <button (click)="onRemoveProduct(product)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+
             </div>
           </td>
         </tr>
