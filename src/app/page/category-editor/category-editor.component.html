@@ -4,8 +4,8 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-8">
-    <table class="table table-striped">
+  <div class="col-12">
+    <table class="table table-sm">
       <thead>
         <tr>
           <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
@@ -15,12 +15,12 @@
       <tbody>
         <tr *ngFor="let category of list$ | async">
           <td>{{category.id}}</td>
-          <td>{{category.name}}</td>
-          <td>{{category.description}}</td>
+          <td><input type="text" name="name" [value]="category.name" [disabled]="disabled"></td>
+          <td><input type="textarea" name="description" [value]="category.description" [disabled]="disabled"></td>
           <td>
             <div class="btn-group" role="group">
-            <button  type="button" class="btn btn-info"><i class="fa fa-eye"></i></button>
-
+            <button  (click)="disabled=false" type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
+            <button (click)="onUpdateCategory(category)"type="button" class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
             <button (click)="onRemoveCategory(category)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
             </div>
           </td>

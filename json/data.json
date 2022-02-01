@@ -832,6 +832,11 @@
       "id": 10,
       "name": "háztartási alkalmazott",
       "description": "szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás"
+    },
+    {
+      "id": 11,
+      "name": "teszt1",
+      "description": "teszt2"
     }
   ],
   "keysToFilterBy": [
