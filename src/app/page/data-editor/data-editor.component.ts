@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable, switchMap } from 'rxjs';
 import { Product } from 'src/app/model/product';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Category } from 'src/app/model/category';
 
 
 @Component({
@@ -15,6 +16,7 @@ export class DataEditorComponent implements OnInit {
   product$: Observable<Product> = this.ar.params.pipe(
     switchMap( params => this.productService.getOne(params['id']) ),
   );
+  categories$: Observable<Category[]> = this.productService.getAllCategories();
 
   constructor(
     private ar: ActivatedRoute,

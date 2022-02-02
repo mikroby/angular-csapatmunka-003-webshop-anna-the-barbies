@@ -8,10 +8,11 @@
 
       <div class="form-group">
         <label for="productCatId"> Kategória ID </label>
-        <input [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
+        <select [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
           placeholder="Milyen kategóriában indul a hős?" required>
-        <!-- <option *ngFor="let category of categories | async" [value]="category">
-            {{ category}} </option> -->
+        <option *ngFor="let category of categories$ | async" [value]="category.id">
+            {{ category.name }} </option>
+        </select>
         <div class="error-message" [hidden]="productForm.controls['catId']?.valid">
           Egy rendes hősnek legyen kategóriája!
         </div>
@@ -59,16 +60,22 @@
       </div>
       <div class="form-group">
         <label for="productFeatured"> Kiemelt hőst regisztrálsz? </label>
-        <input [(ngModel)]="product.featured" class="form-control" name="productFeatured" id="productFeatured"
+        <select [(ngModel)]="product.featured" class="form-control" name="productFeatured" id="productFeatured"
           type="text" placeholder="Add meg a hős példányszámát!" required>
+          <option value="true">kiemelt</option>
+          <option value="false">nem kiemelt</option>
+     </select>
         <div class="error-message" [hidden]="productForm.controls['featured']?.valid">
           Egy rendes hősről tudni kell kiemelt-e!
         </div>
       </div>
       <div class="form-group">
         <label for="productActive"> Jelenleg aktív a hős? </label>
-        <input [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive" type="text"
+        <select [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive" type="text"
           placeholder="Add meg a hős példányszámát!" required>
+          <option value="true">aktív</option>
+             <option value="false">inaktív</option>
+           </select>
         <div class="error-message" [hidden]="productForm.controls['active']?.valid">
           Egy rendes hősről tudni kell aktív-e!
         </div>
