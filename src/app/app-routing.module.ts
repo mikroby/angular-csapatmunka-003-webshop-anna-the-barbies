@@ -93,7 +93,7 @@ const routes: Routes = [
     path: 'category-polisher',
     component: CategoryPolisherComponent,
   },
-    {
+  {
     path: '**',
     component: PageNotFoundComponent,
   }
