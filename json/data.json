@@ -37,7 +37,7 @@
       "id": 4,
       "catId": 4,
       "name": "Pom Pom",
-      "description": "a multifunkciós lazulás nagymestere. fel....le....hehe",
+      "description": "a multifunkciós lazulás nagymestere. fel....lehehe",
       "image": "pom-pom.jpg",
       "price": 99000,
       "stock": 1,
@@ -779,6 +779,17 @@
       "price": 10000,
       "stock": 2,
       "featured": "false",
+      "active": true
+    },
+    {
+      "id": 72,
+      "catId": "1",
+      "name": "1",
+      "description": "1",
+      "image": "1",
+      "price": 1,
+      "stock": 1,
+      "featured": false,
       "active": true
     }
   ],

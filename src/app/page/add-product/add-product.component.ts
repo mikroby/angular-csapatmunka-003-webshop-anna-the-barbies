@@ -1,3 +1,4 @@
+import { Category } from './../../model/category';
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -14,10 +15,7 @@ export class AddProductComponent implements OnInit {
 
   product = new Product();
 
-  product$: Observable<Product> = this.activatedRoute.params.pipe(
-    switchMap(params => this.productService.getOne(params['id']))
-  )
-  // categories: string[] =
+  categories$: Observable<Category[]> = this.productService.getAllCategories();
 
   constructor(
     private activatedRoute: ActivatedRoute,
