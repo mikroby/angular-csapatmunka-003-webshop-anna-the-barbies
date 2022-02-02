@@ -1,16 +1,16 @@
-<div class="row data-editor">
-  <div *ngIf="product$ | async as product" class="col-12">
+<div class="data-editor col-10 mx-auto">
+  <div *ngIf="product$ | async as product" class="col-8 mx-auto py-5">
     <form #productForm="ngForm" (ngSubmit)="onUpdateProduct(product)">
 
       <input [(ngModel)]="product.id" name="id" type="hidden">
 
       <div class="form-group">
         <label for="productCatId"> Kategória ID </label>
-        <select [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
-        placeholder="Milyen kategóriában indul a hős?" required>
-      <option *ngFor="let category of categories$ | async" [value]="category.id">
-          {{ category.name }} </option>
-      </select>
+        <select [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number" min="0"
+          placeholder="Milyen kategóriában indul a hős?" required>
+          <option *ngFor="let category of categories$ | async" [value]="category.id">
+            {{ category.name }} </option>
+        </select>
         <div class="error-message" [hidden]="productForm.controls['catId']?.valid">
           Egy rendes hősnek legyen kategóriája!
         </div>
@@ -19,7 +19,7 @@
       <div class="form-group">
         <label for="productName"> Név </label>
         <input [(ngModel)]="product.name" class="form-control" name="productName" id="productCatId" type="text"
-           required>
+          required>
         <div class="error-message" [hidden]="productForm.controls['name']?.valid">
           Egy rendes hősnek legyen neve!
         </div>
@@ -27,7 +27,7 @@
       <div class="form-group">
         <label for="productDescription"> Miben erős a hős? </label>
         <input [(ngModel)]="product.description" class="form-control" name="productDescription" id="productDescription"
-           required>
+          required>
         <div class="error-message" [hidden]="productForm.controls['description']?.valid">
           Egy rendes hősnek legyen szuperképessége!
         </div>
@@ -43,7 +43,7 @@
       <div class="form-group">
         <label for="productPrice"> Mibe kerül a hősiessége? </label>
         <input [(ngModel)]="product.price" class="form-control" name="productPrice" id="productPrice" type="number"
-          required>
+          min="0" required>
         <div class="error-message" [hidden]="productForm.controls['price']?.valid">
           Egy rendes hősnek nincsen ára!(?)
         </div>
@@ -51,7 +51,7 @@
       <div class="form-group">
         <label for="productStock"> Hány példányban elérhető? </label>
         <input [(ngModel)]="product.stock" class="form-control" name="productStock" id="productStock" type="number"
-          required>
+          min="0" required>
         <div class="error-message" [hidden]="productForm.controls['stock']?.valid">
           Egy rendes hősről tudni kell hányan van!
         </div>
@@ -59,9 +59,9 @@
       <div class="form-group">
         <label for="productFeatured"> Kiemelt hőst regisztrálsz? </label>
         <select [(ngModel)]="product.featured" class="form-control" name="productFeatured" id="productFeatured"
-         required>
+          required>
           <option value="true">kiemelt</option>
-             <option value="false">nem kiemelt</option>
+          <option value="false">nem kiemelt</option>
         </select>
         <div class="error-message" [hidden]="productForm.controls['featured']?.valid">
           Egy rendes hősről tudni kell kiemelt-e!
@@ -69,17 +69,18 @@
       </div>
       <div class="form-group">
         <label for="productActive"> Jelenleg aktív a hős? </label>
-        <select [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive"
-          required>
+        <select [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive" required>
           <option value="true">aktív</option>
-             <option value="false">inaktív</option>
-           </select>
+          <option value="false">inaktív</option>
+        </select>
         <div class="error-message" [hidden]="productForm.controls['active']?.valid">
           Egy rendes hősről tudni kell aktív-e!
         </div>
       </div>
-
-      <button [disabled]="!productForm.valid" type="submit" class="btn btn-success">Mentés</button>
+      <div class="text-center">
+        <button [disabled]="!productForm.valid" type="submit" class="btn btn-success mr-3">Mentés</button>
+        <button routerLink="/admin" type="submit" class="btn btn-warning">Mégse</button>
+      </div>
     </form>
   </div>
 </div>

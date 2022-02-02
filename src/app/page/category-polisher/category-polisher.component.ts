@@ -12,7 +12,7 @@ import { ProductService } from 'src/app/service/product.service';
 export class CategoryPolisherComponent implements OnInit {
 
   category$: Observable<Category> = this.activatedRoute.params.pipe(
-    switchMap( params => this.productService.getOne(params['id']))
+    switchMap( params => this.productService.getCategory(params['id']))
   );
 
   constructor(
@@ -25,7 +25,7 @@ export class CategoryPolisherComponent implements OnInit {
   }
   onUpdateCategory(category: Category): void {
     this.productService.updateCategory(category).subscribe(
-      category => this.router.navigate(['/admin']),
+      category => this.router.navigate(['/category-editor']),
       err => console.error(err)
     );
   }

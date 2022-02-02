@@ -763,7 +763,7 @@
       "id": 70,
       "catId": 5,
       "name": "Derrick és Harry",
-      "description": "német precizitás, happy-end",
+      "description": "német precizitás, glückliches Ende",
       "image": "derrick.png",
       "price": 100000,
       "stock": 2,
@@ -779,17 +779,6 @@
       "price": 10000,
       "stock": 2,
       "featured": "false",
-      "active": true
-    },
-    {
-      "id": 72,
-      "catId": "1",
-      "name": "1",
-      "description": "1",
-      "image": "1",
-      "price": 1,
-      "stock": 1,
-      "featured": false,
       "active": true
     }
   ],
@@ -843,11 +832,6 @@
       "id": 10,
       "name": "háztartási alkalmazott",
       "description": "szélmalomharc a házimunkában? szuperhőseinkkel játék a háztartás"
-    },
-    {
-      "id": 11,
-      "name": "teszt1",
-      "description": "teszt2"
     }
   ],
   "keysToFilterBy": [

@@ -90,12 +90,12 @@ const routes: Routes = [
     component: CategoryEditorComponent,
   },
   {
-    path: 'category-polisher',
+    path: 'category-polisher/:id',
     component: CategoryPolisherComponent,
   },
   {
     path: '**',
-    component: PageNotFoundComponent,
+    component: HomeComponent,
   }
 ];
 
