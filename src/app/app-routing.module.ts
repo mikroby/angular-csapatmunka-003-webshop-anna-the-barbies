@@ -73,6 +73,10 @@ const routes: Routes = [
     component: DataEditorComponent,
   },
   {
+    path: 'data-editor/:id',
+    component: DataEditorComponent,
+  },
+  {
     path: 'add-product',
     component: AddProductComponent,
   },
