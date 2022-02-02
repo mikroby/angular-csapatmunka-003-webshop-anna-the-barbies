@@ -26,12 +26,6 @@ export class DataEditorComponent implements OnInit {
 
   }
 
-  onRemoveProduct(product: Product): void {
-    this.productService.removeProduct(product).subscribe(
-      product => this.router.navigate(['/admin']),
-      err => console.error(err)
-    );
-  }
   onUpdateProduct(product: Product): void {
     this.productService.updateProduct(product).subscribe(
       product => this.router.navigate(['/admin']),
