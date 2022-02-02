@@ -1,8 +1,8 @@
 import { ProductService } from 'src/app/service/product.service';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, switchMap } from 'rxjs';
 import { Product } from 'src/app/model/product';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -12,11 +12,12 @@ import { Router } from '@angular/router';
 })
 export class DataEditorComponent implements OnInit {
 
-  list$: Observable<Product[]> = this.productService.getAll();
-  keys: string[] = Object.keys(new Product());
-  disabled: boolean = true;
+  product$: Observable<Product> = this.ar.params.pipe(
+    switchMap( params => this.productService.getOne(params['id']) ),
+  );
 
   constructor(
+    private ar: ActivatedRoute,
     private productService: ProductService,
     private router: Router,
   ) { }
@@ -25,12 +26,6 @@ export class DataEditorComponent implements OnInit {
 
   }
 
-  onRemoveProduct(product: Product): void {
-    this.productService.removeProduct(product).subscribe(
-      product => this.router.navigate(['/admin']),
-      err => console.error(err)
-    );
-  }
   onUpdateProduct(product: Product): void {
     this.productService.updateProduct(product).subscribe(
       product => this.router.navigate(['/admin']),

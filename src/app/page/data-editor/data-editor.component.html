@@ -1,48 +1,77 @@
-
 <div class="row">
- <div class="col-12 my-5">
-    <a routerLink="/add-product" class="btn btn-light btn-block btn-lg">új Hős hozzáadása</a>
+  <div *ngIf="product$ | async as product" class="col-12">
+    <form #productForm="ngForm" (ngSubmit)="onUpdateProduct(product)">
+
+      <input [(ngModel)]="product.id" name="id" type="hidden">
+
+      <div class="form-group">
+        <label for="productCatId"> Kategória ID </label>
+        <input [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
+          required>
+
+        <div class="error-message" [hidden]="productForm.controls['catId']?.valid">
+          Egy rendes hősnek legyen kategóriája!
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="productName"> Név </label>
+        <input [(ngModel)]="product.name" class="form-control" name="productName" id="productCatId" type="text"
+           required>
+        <div class="error-message" [hidden]="productForm.controls['name']?.valid">
+          Egy rendes hősnek legyen neve!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productDescription"> Miben erős a hős? </label>
+        <input [(ngModel)]="product.description" class="form-control" name="productDescription" id="productDescription"
+           required>
+        <div class="error-message" [hidden]="productForm.controls['description']?.valid">
+          Egy rendes hősnek legyen szuperképessége!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productImage"> Hogyan fest a hősünk? </label>
+        <input [(ngModel)]="product.image" class="form-control" name="productImage" id="productImage" type="text"
+          required>
+        <div class="error-message" [hidden]="productForm.controls['image']?.valid">
+          Egy rendes hősnek legyen képe megjelenni!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productPrice"> Mibe kerül a hősiessége? </label>
+        <input [(ngModel)]="product.price" class="form-control" name="productPrice" id="productPrice" type="number"
+          required>
+        <div class="error-message" [hidden]="productForm.controls['price']?.valid">
+          Egy rendes hősnek nincsen ára!(?)
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productStock"> Hány példányban elérhető? </label>
+        <input [(ngModel)]="product.stock" class="form-control" name="productStock" id="productStock" type="number"
+          required>
+        <div class="error-message" [hidden]="productForm.controls['stock']?.valid">
+          Egy rendes hősről tudni kell hányan van!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productFeatured"> Kiemelt hőst regisztrálsz? </label>
+        <input [(ngModel)]="product.featured" class="form-control" name="productFeatured" id="productFeatured"
+          type="text"  required>
+        <div class="error-message" [hidden]="productForm.controls['featured']?.valid">
+          Egy rendes hősről tudni kell kiemelt-e!
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="productActive"> Jelenleg aktív a hős? </label>
+        <input [(ngModel)]="product.active" class="form-control" name="productActive" id="productActive" type="text"
+          required>
+        <div class="error-message" [hidden]="productForm.controls['active']?.valid">
+          Egy rendes hősről tudni kell aktív-e!
+        </div>
+      </div>
+
+      <button [disabled]="!productForm.valid" type="submit" class="btn btn-success">Mentés</button>
+    </form>
   </div>
 </div>
-<div class="row">
-  <div class="col-12">
-    <table class="table table-responsive-sm">
-      <thead>
-        <tr>
-          <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
-          <th></th>
-          </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let product of list$ | async">
-          <td> {{product.id}}</td>
-          <td><input type="number" name="catId" [value]="product.catId" [disabled]="disabled"></td>
-          <td><input type="text" name="name" [value]="product.name" [disabled]="disabled"></td>
-          <td><input type="textarea" name="description" [value]="product.description" [disabled]="disabled"></td>
-          <td><input type="text" name="image" [value]="product.image" [disabled]="disabled"></td>
-          <td><input type="number" name="price" [value]="product.price" [disabled]="disabled"></td>
-          <td><input type="number" name="stock" [value]="product.stock" [disabled]="disabled"></td>
-          <td><select name="featured" [value]="product.featured" [disabled]="disabled">
-            <option value="true">kiemelt</option>
-            <option value="false">nem kiemelt</option>
-          </select>
-            </td>
-          <td><select name="active" [value]="product.active" [disabled]="disabled">
-            <option value="true">aktív</option>
-            <option value="false">inaktív</option>
-          </select></td>
-                    <td>
-            <div class="btn-group" role="group">
-            <button  (click)="disabled=false" type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
-            <button (click)="onUpdateProduct(product)"type="button" class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
-            <button (click)="onRemoveProduct(product)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
-
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
