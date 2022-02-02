@@ -15,6 +15,7 @@ export class AddProductComponent implements OnInit {
 
   product = new Product();
 
+
   categories$: Observable<Category[]> = this.productService.getAllCategories();
 
   constructor(
@@ -27,7 +28,7 @@ export class AddProductComponent implements OnInit {
   }
   onAddProduct(product: Product): void {
     this.productService.addProduct(product).subscribe(
-      product => this.router.navigate(['/data-editor']),
+      product => this.router.navigate(['/admin']),
       err => console.error(err)
     );
   }

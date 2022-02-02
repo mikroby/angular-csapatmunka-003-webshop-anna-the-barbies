@@ -1,11 +1,11 @@
-<div class="row" id="top">
-  <div class="col-12 my-5">
+<div class="row mx-auto" id="top">
+  <div class="col-10 mx-auto my-5">
     <a routerLink="/add-category" class="btn btn-light btn-block btn-lg">új kategória hozzáadása</a>
   </div>
 </div>
 <div class="row">
-  <div class="col-12">
-    <table class="table table-sm">
+  <div class="col-10 mx-auto">
+    <table class="table">
       <thead>
         <tr>
           <th *ngFor="let key of keys"> {{ key | titlecase}} </th>
@@ -15,20 +15,18 @@
       <tbody>
         <tr *ngFor="let category of list$ | async">
           <td>{{category.id}}</td>
-          <td><input type="text" name="name" [value]="category.name" [disabled]="disabled"></td>
-          <td><input type="textarea" name="description" [value]="category.description" [disabled]="disabled"></td>
+          <td>{{category.name}}</td>
+          <td>{{category.description}}</td>
           <td>
             <div class="btn-group" role="group">
-            <button  (click)="disabled=false" type="button" class="btn btn-info"><i class="fa fa-pencil"></i></button>
-            <button (click)="onUpdateCategory(category)"type="button" class="btn btn-success"><i class="fa fa-floppy-o"></i></button>
+            <button  [routerLink]="['/', 'category-polisher', category.id]" type="button" class="btn btn-info"><i class="fa fa-eye"></i></button>
             <button (click)="onRemoveCategory(category)" type="button" class="btn btn-danger"><i class="fa fa-trash"></i></button>
             </div>
           </td>
         </tr>
       </tbody>
     </table>
-    <app-category-polisher></app-category-polisher>
-  </div>
+    </div>
 </div>
 
 

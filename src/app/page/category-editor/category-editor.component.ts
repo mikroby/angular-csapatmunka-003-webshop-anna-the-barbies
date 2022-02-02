@@ -26,7 +26,7 @@ export class CategoryEditorComponent implements OnInit {
 
   onRemoveCategory(category: Category): void {
     this.productService.removeCategory(category).subscribe(
-      category => this.router.navigate(['/admin']),
+      category => location.reload(),
       err => console.error(err)
     );
   }

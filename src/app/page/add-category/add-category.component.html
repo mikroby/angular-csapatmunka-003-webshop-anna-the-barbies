@@ -1,12 +1,12 @@
-<h2 class="text-center my-5">új kategória hozzáadása</h2>
+<h2 class="col-10 text-center mx-auto my-5">új kategória hozzáadása</h2>
 
-<div class="row">
-  <div class="col-12 add-category">
+<div class="row col-10 mx-auto">
+  <div class="col-12 add-category my-3">
     <form #categoryForm="ngForm" (ngSubmit)="onAddCategory(category)">
 
       <input [(ngModel)]="category.id" name="id" type="hidden">
 
-      <div class="form-group">
+      <div class="form-group my-3">
         <label for="categoryName"> Hős kategória neve </label>
         <input [(ngModel)]="category.name" class="form-control" name="categoryName" id="categoryName" type="text"
           placeholder="Milyen kategóriában indul a hős?" required>
@@ -22,8 +22,10 @@
           A kategória pontosabb körülírása élet-halál kérdése!
         </div>
       </div>
-
-      <button [disabled]="!categoryForm.form.valid" type="submit" class="btn btn-success">Mentés</button>
+      <div class="text-center mb-3">
+      <button [disabled]="!categoryForm.form.valid" type="submit" class="btn btn-success mr-3">Mentés</button>
+      <button routerLink="/category-editor" type="submit" class="btn btn-warning">Mégse</button>
+      </div>
     </form>
      </div>
 </div>

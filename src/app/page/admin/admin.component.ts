@@ -14,7 +14,8 @@ export class AdminComponent implements OnInit {
   list$: Observable<Product[]> = this.productService.getAll();
   keys: string[] = Object.keys(new Product());
   disabled: boolean = true;
-
+  filterKey: string = '';
+  phrase: string = '';
 
   constructor(
     private productService: ProductService,
@@ -27,7 +28,7 @@ export class AdminComponent implements OnInit {
 
   onRemoveProduct(product: Product): void {
     this.productService.removeProduct(product).subscribe(
-      product => this.router.navigate(['/admin']),
+      product => location.reload(),
       err => console.error(err)
     );
   }
