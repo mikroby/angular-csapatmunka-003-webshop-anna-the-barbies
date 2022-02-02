@@ -10,7 +10,7 @@
         <label for="productCatId"> Kategória ID </label>
         <input [(ngModel)]="product.catId" class="form-control" name="catId" id="productCatId" type="number"
           placeholder="Milyen kategóriában indul a hős?" required>
-        <!-- <option *ngFor="let category of categories | async" [[value]="category">
+        <!-- <option *ngFor="let category of categories | async" [value]="category">
             {{ category}} </option> -->
         <div class="error-message" [hidden]="productForm.controls['catId']?.valid">
           Egy rendes hősnek legyen kategóriája!

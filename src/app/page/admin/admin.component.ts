@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Product } from 'src/app/model/product';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +11,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  list$: Observable<Product[]> = this.productService.getAll();
+  keys: string[] = Object.keys(new Product());
+  disabled: boolean = true;
+
+
+  constructor(
+    private productService: ProductService,
+    private router: Router,
+  ) { }
 
   ngOnInit(): void {
+
+  }
+
+  onRemoveProduct(product: Product): void {
+    this.productService.removeProduct(product).subscribe(
+      product => this.router.navigate(['/admin']),
+      err => console.error(err)
+    );
   }
 
 }
