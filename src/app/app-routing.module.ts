@@ -18,6 +18,7 @@ import { CategoryPolisherComponent } from './page/category-polisher/category-pol
 import { DataEditorComponent } from './page/data-editor/data-editor.component';
 import { HomeComponent } from './page/home/home.component';
 import { AddProductComponent } from './page/add-product/add-product.component';
+import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -90,7 +91,7 @@ const routes: Routes = [
   },
     {
     path: '**',
-    component: HomeComponent,
+    component: PageNotFoundComponent,
   }
 ];
 

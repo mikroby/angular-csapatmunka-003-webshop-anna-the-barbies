@@ -29,6 +29,7 @@ import { AddProductComponent } from './page/add-product/add-product.component';
 import { AddCategoryComponent } from './page/add-category/add-category.component';
 import { CategoryEditorComponent } from './page/category-editor/category-editor.component';
 import { CategoryPolisherComponent } from './page/category-polisher/category-polisher.component';
+import { PageNotFoundComponent } from './page/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { CategoryPolisherComponent } from './page/category-polisher/category-pol
     AddCategoryComponent,
     CategoryEditorComponent,
     CategoryPolisherComponent,
+    PageNotFoundComponent,
 ],
   imports: [
     BrowserModule,
