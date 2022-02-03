@@ -655,8 +655,8 @@
       "name": "101 kiskutya",
       "description": "statiszták tömegjelenetekhez, eredeti bundában",
       "image": "101-kiskutya.png",
-      "price": 101101,
-      "stock": 101,
+      "price": 1000,
+      "stock": 10,
       "featured": true,
       "active": true
     },
@@ -779,6 +779,17 @@
       "price": 10000,
       "stock": 2,
       "featured": "false",
+      "active": true
+    },
+    {
+      "id": 72,
+      "catId": "7",
+      "name": " Szürke Szamár",
+      "description": "Jó útitárs, egész út alatt elszórakoztat!",
+      "image": "szamar.png",
+      "price": 2000,
+      "stock": 5,
+      "featured": "true",
       "active": true
     }
   ],
