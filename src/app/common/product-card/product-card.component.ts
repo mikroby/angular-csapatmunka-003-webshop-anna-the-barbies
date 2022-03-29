@@ -15,6 +15,6 @@ export class ProductCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.src=`/assets/img/${this.currentProduct.image}`;
+    this.src=`./assets/img/${this.currentProduct.image}`;
   }
 }
