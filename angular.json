@@ -23,7 +23,7 @@
         "build": {
           "builder": "ngc-esbuild-devkit:build",
           "options": {
-            "outputPath": "dist/angular-routing",
+            "outputPath": "public",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
