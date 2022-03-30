@@ -23,7 +23,7 @@
         "build": {
           "builder": "ngc-esbuild-devkit:build",
           "options": {
-            "outputPath": "public",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
